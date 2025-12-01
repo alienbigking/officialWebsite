@@ -1,0 +1,234 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.headerScrolled {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    height: 70px;
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+
+  a {
+    display: block;
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+
+    @media (max-width: 768px) {
+      height: 35px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.navLink {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: #fff;
+    opacity: 0.8;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  .headerScrolled & {
+    color: #2c2c2c;
+
+    &::after {
+      background: #2c2c2c;
+    }
+
+    &:hover {
+      color: #000;
+      opacity: 1;
+    }
+  }
+}
+
+.navLinkActive {
+  color: #fff;
+
+  &::after {
+    width: 100%;
+  }
+
+  .headerScrolled & {
+    color: #000;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .headerScrolled & {
+    color: #2c2c2c;
+
+    &:hover {
+      background: #2c2c2c;
+      color: #fff;
+    }
+  }
+}
+
+.mobileToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+
+  .headerScrolled & {
+    color: #2c2c2c;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+}
+
+// Mobile Drawer Styles
+.mobileDrawer {
+  :global {
+    .ant-drawer-body {
+      padding: 30px 20px;
+    }
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.mobileNavLink {
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #eee;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.mobileNavLinkActive {
+  color: #000;
+  font-weight: 600;
+}
+
+.mobileSocial {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.mobileSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #2c2c2c;
+  font-size: 18px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #2c2c2c;
+    color: #fff;
+  }
+}
