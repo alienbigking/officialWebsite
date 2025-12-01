@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import { Row, Col, Carousel } from 'antd'
+import { useIntl } from '@umijs/max'
 import styles from './portfolios.less'
 
 const Portfolios: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all')
+  const intl = useIntl()
 
   // 作品分类
   const categories = [
-    { id: 'all', label: 'All' },
-    { id: 'nature', label: 'Nature' },
-    { id: 'portrait', label: 'Portrait' },
-    { id: 'wedding', label: 'Wedding' },
-    { id: 'event', label: 'Event' }
+    { id: 'all', label: intl.formatMessage({ id: 'portfolios.all' }) },
+    { id: 'nature', label: intl.formatMessage({ id: 'portfolios.nature' }) },
+    { id: 'portrait', label: intl.formatMessage({ id: 'portfolios.portrait' }) },
+    { id: 'wedding', label: intl.formatMessage({ id: 'portfolios.wedding' }) },
+    { id: 'event', label: intl.formatMessage({ id: 'portfolios.event' }) }
   ]
 
   // 作品数据
@@ -47,8 +49,8 @@ const Portfolios: React.FC = () => {
       {/* Hero Section */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>Explore</p>
-          <h1 className={styles.heroTitle}>Portfolios</h1>
+          <p className={styles.heroSubtitle}>{intl.formatMessage({ id: 'portfolios.explore' })}</p>
+          <h1 className={styles.heroTitle}>{intl.formatMessage({ id: 'portfolios.title' })}</h1>
         </div>
       </div>
 

@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from '@umijs/max'
+import { Link, useLocation, useIntl, setLocale, getLocale } from '@umijs/max'
 import { Drawer } from 'antd'
-import { MenuOutlined, FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled } from '@ant-design/icons'
+import { MenuOutlined, FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled, GlobalOutlined } from '@ant-design/icons'
 import styles from './Header.less'
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const intl = useIntl()
+  const currentLocale = getLocale()
 
   // 监听滚动事件
   useEffect(() => {
@@ -20,12 +22,12 @@ const Header: React.FC = () => {
   }, [])
 
   const navItems = [
-    { path: '/home', label: 'Home' },
-    { path: '/portfolios', label: 'Portfolios' },
-    { path: '/services', label: 'Services' },
-    { path: '/about', label: 'About' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/home', label: intl.formatMessage({ id: 'common.home' }) },
+    { path: '/portfolios', label: intl.formatMessage({ id: 'common.portfolios' }) },
+    { path: '/services', label: intl.formatMessage({ id: 'common.services' }) },
+    { path: '/about', label: intl.formatMessage({ id: 'common.about' }) },
+    { path: '/blog', label: intl.formatMessage({ id: 'common.blog' }) },
+    { path: '/contact', label: intl.formatMessage({ id: 'common.contact' }) }
   ]
 
   const socialLinks = [
@@ -37,6 +39,12 @@ const Header: React.FC = () => {
 
   // 判断是否在首页
   const isHomePage = location.pathname === '/home' || location.pathname === '/'
+
+  // 切换语言
+  const toggleLanguage = () => {
+    const newLocale = currentLocale === 'zh-CN' ? 'en-US' : 'zh-CN'
+    setLocale(newLocale, false)
+  }
 
   return (
     <header className={`${styles.header} ${scrolled || !isHomePage ? styles.headerScrolled : ''}`}>
@@ -71,6 +79,15 @@ const Header: React.FC = () => {
               {link.icon}
             </a>
           ))}
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className={styles.langToggle}
+            title={intl.formatMessage({ id: 'header.language' })}
+          >
+            <GlobalOutlined />
+            <span>{currentLocale === 'zh-CN' ? '中' : 'EN'}</span>
+          </button>
         </div>
 
         <button

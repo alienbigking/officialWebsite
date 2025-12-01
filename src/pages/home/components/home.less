@@ -13,35 +13,6 @@
   :global {
     .ant-carousel {
       height: 100%;
-      
-      .slick-slider,
-      .slick-list,
-      .slick-track {
-        height: 100%;
-      }
-    }
-
-    .slick-dots {
-      bottom: 50px !important;
-      z-index: 10;
-
-      li {
-        margin: 0 8px;
-        
-        button {
-          background: rgba(255, 255, 255, 0.5) !important;
-          width: 12px !important;
-          height: 12px !important;
-          border-radius: 50% !important;
-          opacity: 1 !important;
-        }
-      }
-
-      li.slick-active button {
-        background: #fff !important;
-        width: 14px !important;
-        height: 14px !important;
-      }
     }
   }
 }
@@ -85,6 +56,10 @@
   text-align: center;
   padding-bottom: 100px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .heroCategory {

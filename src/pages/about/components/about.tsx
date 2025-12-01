@@ -1,9 +1,10 @@
 import React from 'react'
 import { Row, Col, Carousel } from 'antd'
-import { Link } from '@umijs/max'
+import { Link, useIntl } from '@umijs/max'
 import styles from './about.less'
 
 const About: React.FC = () => {
+  const intl = useIntl()
   // 服务数据
   const services = [
     {
@@ -41,8 +42,8 @@ const About: React.FC = () => {
       {/* Hero Section */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>Explore</p>
-          <h1 className={styles.heroTitle}>About Me</h1>
+          <p className={styles.heroSubtitle}>{intl.formatMessage({ id: 'about.explore' })}</p>
+          <h1 className={styles.heroTitle}>{intl.formatMessage({ id: 'about.title' })}</h1>
         </div>
       </div>
 
@@ -74,7 +75,7 @@ const About: React.FC = () => {
               <p className={styles.quote}>
                 &quot;A gray cat slinks past a wooden house. There&apos;s has something a little intimidating attempting to describe.
               </p>
-              <Link to="/portfolios" className={styles.btnPrimary}>My Work</Link>
+              <Link to="/portfolios" className={styles.btnPrimary}>{intl.formatMessage({ id: 'about.myWork' })}</Link>
             </Col>
           </Row>
         </div>

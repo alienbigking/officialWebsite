@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Carousel, Row, Col } from 'antd'
-import { Link } from '@umijs/max'
+import { Link, useIntl } from '@umijs/max'
 import styles from './home.less'
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const intl = useIntl()
 
   // 轮播图数据
   const heroSlides = [
@@ -115,12 +116,12 @@ const Home: React.FC = () => {
       {/* Hero Carousel */}
       <div className={styles.heroSection}>
         <Carousel
-          autoplay
+          autoplay={{ dotDuration: true }}
+          arrows
           autoplaySpeed={5000}
           speed={800}
-          dots={{
-            className: 'custom-dots'
-          }}
+          // pauseOnHover={false}
+          // pauseOnDotsHover={false}
           dotPosition="bottom"
           effect="fade"
           beforeChange={(_, next) => setCurrentSlide(next)}
@@ -166,7 +167,7 @@ const Home: React.FC = () => {
               <p className={styles.quote}>
                 &quot;A gray cat slinks past a wooden house. There&apos;s has something a little intimidating attempting to describe.
               </p>
-              <Link to="/portfolios" className={styles.btnPrimary}>My Work</Link>
+              <Link to="/portfolios" className={styles.btnPrimary}>{intl.formatMessage({ id: 'home.myWork' })}</Link>
             </Col>
           </Row>
         </div>

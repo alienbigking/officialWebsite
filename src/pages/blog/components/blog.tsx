@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Row, Col, Input, Button } from 'antd'
-import { Link } from '@umijs/max'
+import { Link, useIntl } from '@umijs/max'
 import { UserOutlined, MessageOutlined } from '@ant-design/icons'
 import styles from './blog.less'
 
 const Blog: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1)
+  const intl = useIntl()
+
   const blogPosts = [
     {
       id: 1,
@@ -93,8 +96,8 @@ const Blog: React.FC = () => {
     <main className={styles.blog}>
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>Explore</p>
-          <h1 className={styles.heroTitle}>My Blog</h1>
+          <p className={styles.heroSubtitle}>{intl.formatMessage({ id: 'blog.explore' })}</p>
+          <h1 className={styles.heroTitle}>{intl.formatMessage({ id: 'blog.title' })}</h1>
         </div>
       </div>
 
@@ -150,16 +153,17 @@ const Blog: React.FC = () => {
               <div className={styles.sidebar}>
                 <aside className={styles.sidebarWidget}>
                   <Input.Search
+                    placeholder={intl.formatMessage({ id: 'blog.searchKeyword' })}
                     className={styles.searchInput}
-                    placeholder="Search Keyword"
-                    enterButton="Search"
+                    onSearch={(value) => console.log(value)}
+                    enterButton={intl.formatMessage({ id: 'blog.search' })}
                     size="large"
                     allowClear
                   />
                 </aside>
 
                 <aside className={styles.sidebarWidget}>
-                  <h4 className={styles.widgetTitle}>Category</h4>
+                  <h3 className={styles.widgetTitle}>{intl.formatMessage({ id: 'blog.category' })}</h3>
                   <ul className={styles.categoryList}>
                     {categories.map((cat) => (
                       <li key={cat.name}>
@@ -173,7 +177,7 @@ const Blog: React.FC = () => {
                 </aside>
 
                 <aside className={styles.sidebarWidget}>
-                  <h4 className={styles.widgetTitle}>Recent Post</h4>
+                  <h3 className={styles.widgetTitle}>{intl.formatMessage({ id: 'blog.recentPost' })}</h3>
                   <div className={styles.recentPosts}>
                     {recentPosts.map((post) => (
                       <div key={post.title} className={styles.recentPostItem}>
@@ -188,7 +192,7 @@ const Blog: React.FC = () => {
                 </aside>
 
                 <aside className={styles.sidebarWidget}>
-                  <h4 className={styles.widgetTitle}>Tag Clouds</h4>
+                  <h3 className={styles.widgetTitle}>{intl.formatMessage({ id: 'blog.tagClouds' })}</h3>
                   <div className={styles.tagList}>
                     {tags.map((tag) => (
                       <button key={tag} type="button">
@@ -199,7 +203,7 @@ const Blog: React.FC = () => {
                 </aside>
 
                 <aside className={styles.sidebarWidget}>
-                  <h4 className={styles.widgetTitle}>Instagram Feeds</h4>
+                  <h3 className={styles.widgetTitle}>{intl.formatMessage({ id: 'blog.instagramFeeds' })}</h3>
                   <div className={styles.instagramGrid}>
                     {instagramFeeds.map((img, index) => (
                       <img key={img + index.toString()} src={img} alt="Instagram" />
@@ -208,10 +212,14 @@ const Blog: React.FC = () => {
                 </aside>
 
                 <aside className={styles.sidebarWidget}>
-                  <h4 className={styles.widgetTitle}>Newsletter</h4>
-                  <Input placeholder="Enter email" size="large" className={styles.newsletterInput} />
+                  <h3 className={styles.widgetTitle}>{intl.formatMessage({ id: 'blog.newsletter' })}</h3>
+                  <Input
+                    type="email"
+                    placeholder={intl.formatMessage({ id: 'blog.enterEmail' })}
+                    className={styles.newsletterInput}
+                  />
                   <Button type="primary" block className={styles.newsletterButton}>
-                    Subscribe
+                    {intl.formatMessage({ id: 'blog.subscribe' })}
                   </Button>
                 </aside>
               </div>

@@ -1,8 +1,10 @@
 import React from 'react'
 import { Row, Col, Carousel } from 'antd'
+import { useIntl } from '@umijs/max'
 import styles from './services.less'
 
 const Services: React.FC = () => {
+  const intl = useIntl()
   // 服务数据
   const services = [
     {
@@ -98,8 +100,8 @@ const Services: React.FC = () => {
       {/* Hero Section */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>Explore</p>
-          <h1 className={styles.heroTitle}>Services</h1>
+          <p className={styles.heroSubtitle}>{intl.formatMessage({ id: 'services.explore' })}</p>
+          <h1 className={styles.heroTitle}>{intl.formatMessage({ id: 'services.title' })}</h1>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, Input, Button, message, Row, Col } from 'antd'
 import { EnvironmentOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons'
+import { useIntl } from '@umijs/max'
 import styles from './contact.less'
 
 const { TextArea } = Input
@@ -25,10 +26,11 @@ const contactInfo = [
 
 const Contact: React.FC = () => {
   const [form] = Form.useForm()
+  const intl = useIntl()
 
-  const onFinish = (values: Record<string, string>) => {
+  const onFinish = (values: any) => {
     console.log('Form values:', values)
-    message.success('Message sent successfully!')
+    message.success(intl.formatMessage({ id: 'contact.messageSent' }))
     form.resetFields()
   }
 
@@ -36,8 +38,8 @@ const Contact: React.FC = () => {
     <main className={styles.contact}>
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <p className={styles.heroSubtitle}>Explore</p>
-          <h1 className={styles.heroTitle}>Contact Me</h1>
+          <p className={styles.heroSubtitle}>{intl.formatMessage({ id: 'contact.explore' })}</p>
+          <h1 className={styles.heroTitle}>{intl.formatMessage({ id: 'contact.title' })}</h1>
         </div>
       </div>
 
@@ -53,7 +55,7 @@ const Contact: React.FC = () => {
             />
           </div>
 
-          <h2 className={styles.sectionTitle}>Get in Touch</h2>
+          <h2 className={styles.formTitle}>{intl.formatMessage({ id: 'contact.getInTouch' })}</h2>
 
           <Row gutter={[32, 32]}>
             <Col xs={24} lg={16}>
@@ -63,7 +65,7 @@ const Contact: React.FC = () => {
                     name="message"
                     rules={[{ required: true, message: 'Please enter your message' }]}
                   >
-                    <TextArea rows={6} placeholder="Enter Message" />
+                    <Input.TextArea rows={6} placeholder={intl.formatMessage({ id: 'contact.enterMessage' })} />
                   </Form.Item>
 
                   <Row gutter={16}>
@@ -72,7 +74,7 @@ const Contact: React.FC = () => {
                         name="name"
                         rules={[{ required: true, message: 'Please enter your name' }]}
                       >
-                        <Input placeholder="Enter your name" />
+                        <Input placeholder={intl.formatMessage({ id: 'contact.enterName' })} />
                       </Form.Item>
                     </Col>
                     <Col xs={24} sm={12}>
@@ -83,7 +85,7 @@ const Contact: React.FC = () => {
                           { type: 'email', message: 'Please enter a valid email' }
                         ]}
                       >
-                        <Input placeholder="Enter email address" />
+                        <Input type="email" placeholder={intl.formatMessage({ id: 'contact.enterEmail' })} />
                       </Form.Item>
                     </Col>
                   </Row>
@@ -92,12 +94,12 @@ const Contact: React.FC = () => {
                     name="subject"
                     rules={[{ required: true, message: 'Please enter subject' }]}
                   >
-                    <Input placeholder="Enter Subject" />
+                    <Input placeholder={intl.formatMessage({ id: 'contact.enterSubject' })} />
                   </Form.Item>
 
                   <Form.Item className={styles.submitWrapper}>
-                    <Button type="primary" htmlType="submit" size="large">
-                      Send
+                    <Button type="primary" htmlType="submit" className={styles.submitBtn}>
+                      {intl.formatMessage({ id: 'contact.send' })}
                     </Button>
                   </Form.Item>
                 </Form>

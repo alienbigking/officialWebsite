@@ -1,19 +1,20 @@
 import React from 'react'
-import { Link } from '@umijs/max'
+import { Link, useIntl } from '@umijs/max'
 import { Row, Col, Input, Button } from 'antd'
 import { FacebookFilled, InstagramFilled, LinkedinFilled, YoutubeFilled } from '@ant-design/icons'
 import styles from './Footer.less'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
+  const intl = useIntl()
 
   const footerLinks = {
     navigation: [
-      { label: 'Home', path: '/' },
-      { label: 'About', path: '/about' },
-      { label: 'Services', path: '/services' },
-      { label: 'Blog', path: '/blog' },
-      { label: 'Contact', path: '/contact' }
+      { label: intl.formatMessage({ id: 'common.home' }), path: '/' },
+      { label: intl.formatMessage({ id: 'common.about' }), path: '/about' },
+      { label: intl.formatMessage({ id: 'common.services' }), path: '/services' },
+      { label: intl.formatMessage({ id: 'common.blog' }), path: '/blog' },
+      { label: intl.formatMessage({ id: 'common.contact' }), path: '/contact' }
     ],
     contact: [
       { label: '87/A, Green lane, CA 6732', type: 'address' },
@@ -68,7 +69,7 @@ const Footer: React.FC = () => {
             {/* Navigation Column */}
             <Col xs={24} sm={12} lg={6}>
               <div className={styles.footerWidget}>
-                <h4 className={styles.footerTitle}>Navigation</h4>
+                <h4 className={styles.footerTitle}>{intl.formatMessage({ id: 'footer.navigation' })}</h4>
                 <ul className={styles.footerLinks}>
                   {footerLinks.navigation.map((link, index) => (
                     <li key={index}>
@@ -82,7 +83,7 @@ const Footer: React.FC = () => {
             {/* Contact Column */}
             <Col xs={24} sm={12} lg={6}>
               <div className={styles.footerWidget}>
-                <h4 className={styles.footerTitle}>Contact</h4>
+                <h4 className={styles.footerTitle}>{intl.formatMessage({ id: 'footer.contact' })}</h4>
                 <ul className={styles.footerContact}>
                   {footerLinks.contact.map((item, index) => (
                     <li key={index} className={styles[item.type]}>
@@ -96,11 +97,11 @@ const Footer: React.FC = () => {
             {/* Newsletter Column */}
             <Col xs={24} sm={12} lg={6}>
               <div className={styles.footerWidget}>
-                <h4 className={styles.footerTitle}>Subscribe Newsletter</h4>
+                <h4 className={styles.footerTitle}>{intl.formatMessage({ id: 'footer.subscribeNewsletter' })}</h4>
                 <form onSubmit={handleSubscribe} className={styles.newsletterForm}>
                   <Input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={intl.formatMessage({ id: 'footer.enterEmail' })}
                     className={styles.newsletterInput}
                     required
                   />
@@ -109,7 +110,7 @@ const Footer: React.FC = () => {
                     htmlType="submit"
                     className={styles.newsletterBtn}
                   >
-                    Subscribe
+                    {intl.formatMessage({ id: 'common.subscribe' })}
                   </Button>
                 </form>
               </div>
@@ -133,7 +134,7 @@ const Footer: React.FC = () => {
               </a>
             </p>
             <p>
-              Copyright &copy; {currentYear} All rights reserved | This template is made with ❤️ by{' '}
+              {intl.formatMessage({ id: 'footer.copyright' })} &copy; {currentYear} ❤️ {intl.formatMessage({ id: 'footer.by' })}{' '}
               <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">
                 Colorlib
               </a>

@@ -9,6 +9,12 @@ export default defineConfig({
   hash: true,
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   history: { type: 'browser' },
+  locale: {
+    default: 'en-US',
+    antd: true,
+    baseNavigator: true,
+    baseSeparator: '-' 
+  },
   chainWebpack: (config, args) => {
     config.merge({
       optimization: {
