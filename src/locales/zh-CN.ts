@@ -2,9 +2,9 @@ export default {
   common: {
     home: '首页',
     about: '关于',
-    services: '服务',
-    portfolios: '作品集',
-    blog: '博客',
+    services: '科普',
+    portfolios: '展示',
+    blog: '文章',
     contact: '联系',
     readMore: '阅读更多',
     viewMore: '查看更多',
@@ -23,33 +23,38 @@ export default {
     contact: '联系方式',
     subscribeNewsletter: '订阅资讯',
     enterEmail: '输入您的邮箱',
-    copyright: '版权所有 | 此网页由',
-    by: '制作'
+    copyright: '深海太空科技 保留所有权利 |',
+    by: '模板来自',
+    description:
+      '深海太空科技专注于人形机器人科普，提供通俗易懂的讲解、动手实践 Demo 与学习路径，覆盖感知、运动控制与具身智能等方向。',
+    address: '中国',
+    email: '1260213657@qq.com',
+    phone: '+86 (000) 0000-0000'
   },
   home: {
-    myWork: '我的作品'
+    myWork: '查看展示'
   },
   portfolios: {
     explore: '探索',
-    title: '作品集',
+    title: '展示',
     all: '全部',
-    nature: '自然',
-    portrait: '人像',
-    wedding: '婚礼',
-    event: '活动'
+    nature: 'Demo',
+    portrait: '硬件',
+    wedding: '控制',
+    event: '感知'
   },
   services: {
     explore: '探索',
-    title: '服务'
+    title: '科普'
   },
   about: {
     explore: '探索',
-    title: '关于我',
-    myWork: '我的作品'
+    title: '关于深海太空科技',
+    myWork: '查看展示'
   },
   blog: {
     explore: '探索',
-    title: '我的博客',
+    title: '科普文章',
     searchKeyword: '搜索关键词',
     search: '搜索',
     category: '分类',

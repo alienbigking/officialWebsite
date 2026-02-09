@@ -2,9 +2,9 @@ export default {
   common: {
     home: 'Home',
     about: 'About',
-    services: 'Services',
-    portfolios: 'Portfolios',
-    blog: 'Blog',
+    services: 'Learn',
+    portfolios: 'Showcase',
+    blog: 'Articles',
     contact: 'Contact',
     readMore: 'Read More',
     viewMore: 'View More',
@@ -23,33 +23,38 @@ export default {
     contact: 'Contact',
     subscribeNewsletter: 'Subscribe Newsletter',
     enterEmail: 'Enter your email',
-    copyright: 'All rights reserved | This page is made with',
-    by: 'by'
+    copyright: 'DeepSea SpaceTech. All rights reserved | Made with',
+    by: 'Template by',
+    description:
+      'DeepSea SpaceTech focuses on humanoid robotics popular science. We share accessible explanations, hands-on demos, and learning paths from perception to motion control.',
+    address: 'China',
+    email: '1260213657@qq.com',
+    phone: '+86 (000) 0000-0000'
   },
   home: {
-    myWork: 'My Work'
+    myWork: 'Showcase'
   },
   portfolios: {
     explore: 'Explore',
-    title: 'Portfolios',
+    title: 'Showcase',
     all: 'All',
-    nature: 'Nature',
-    portrait: 'Portrait',
-    wedding: 'Wedding',
-    event: 'Event'
+    nature: 'Demo',
+    portrait: 'Hardware',
+    wedding: 'Control',
+    event: 'Perception'
   },
   services: {
     explore: 'Explore',
-    title: 'Services'
+    title: 'Learn'
   },
   about: {
     explore: 'Explore',
-    title: 'About Me',
-    myWork: 'My Work'
+    title: 'About DeepSea SpaceTech',
+    myWork: 'Showcase'
   },
   blog: {
     explore: 'Explore',
-    title: 'My Blog',
+    title: 'Articles',
     searchKeyword: 'Search Keyword',
     search: 'Search',
     category: 'Category',

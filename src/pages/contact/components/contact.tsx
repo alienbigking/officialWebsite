@@ -9,17 +9,17 @@ const { TextArea } = Input
 const contactInfo = [
   {
     icon: <EnvironmentOutlined />,
-    title: 'Buttonwood, California.',
-    text: 'Rosemead, CA 91770'
+    title: 'China',
+    text: 'DeepSea SpaceTech'
   },
   {
     icon: <PhoneOutlined />,
-    title: '+1 253 565 2365',
+    title: '+86 (000) 0000-0000',
     text: 'Mon to Fri 9am to 6pm'
   },
   {
     icon: <MailOutlined />,
-    title: 'support@colorlib.com',
+    title: '1260213657@qq.com',
     text: 'Send us your query anytime!'
   }
 ]

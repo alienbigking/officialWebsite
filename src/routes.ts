@@ -4,17 +4,21 @@ export const routes = [
     component: '@/pages/main',
     routes: [
       {
-        name: '主页',
+        path: '',
+        component: '@/pages/home/components/home'
+      },
+      {
+        name: '首页',
         path: '/home',
         component: '@/pages/home/components/home'
       },
       {
-        name: '个人中心',
+        name: '展示',
         path: '/portfolios',
         component: '@/pages/portfolios/components/portfolios'
       },
       {
-        name: '服务',
+        name: '科普',
         path: '/services',
         component: '@/pages/services/components/services'
       },
@@ -24,13 +28,13 @@ export const routes = [
         component: '@/pages/about/components/about'
       },
       {
-        name: '博客',
+        name: '文章',
         path: '/blog',
         component: '@/pages/blog/components/blog',
         exact: true
       },
       {
-        name: '博客详情',
+        name: '文章详情',
         path: '/blog/:id',
         component: '@/pages/blog/components/blogDetails'
       },

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Carousel, Row, Col } from 'antd'
 import { Link, useIntl } from '@umijs/max'
+import ShowcaseImageCarousel from '@/components/ShowcaseImageCarousel'
 import styles from './home.less'
 
 const Home: React.FC = () => {
@@ -269,29 +270,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Instagram Section */}
-      <section className={styles.instagramSection}>
-        <Carousel
-          autoplay
-          autoplaySpeed={3000}
-          dots={false}
-          slidesToShow={5}
-          responsive={[
-            { breakpoint: 1200, settings: { slidesToShow: 5 } },
-            { breakpoint: 992, settings: { slidesToShow: 4 } },
-            { breakpoint: 768, settings: { slidesToShow: 3 } },
-            { breakpoint: 576, settings: { slidesToShow: 2 } }
-          ]}
-        >
-          {instagramImages.map((img, index) => (
-            <div key={index} className={styles.instagramItem}>
-              <img src={img} alt={`Instagram ${index + 1}`} />
-              <a href="#" className={styles.instagramLink}>
-                <i className="ti-instagram" />
-              </a>
-            </div>
-          ))}
-        </Carousel>
-      </section>
+      <ShowcaseImageCarousel images={instagramImages} className={styles.instagramSection} />
     </main>
   )
 }

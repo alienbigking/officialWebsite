@@ -17,10 +17,9 @@ const Footer: React.FC = () => {
       { label: intl.formatMessage({ id: 'common.contact' }), path: '/contact' }
     ],
     contact: [
-      { label: '87/A, Green lane, CA 6732', type: 'address' },
-      { label: 'Real State', type: 'text' },
-      { label: 'info@josanclick.com', type: 'email' },
-      { label: '+10 236 327 3782', type: 'phone' }
+      { label: intl.formatMessage({ id: 'footer.address' }), type: 'address' },
+      { label: intl.formatMessage({ id: 'footer.email' }), type: 'email' },
+      { label: intl.formatMessage({ id: 'footer.phone' }), type: 'phone' }
     ]
   }
 
@@ -48,7 +47,7 @@ const Footer: React.FC = () => {
                   <img src="/assets/img/logo/logo2_footer.png" alt="Footer Logo" />
                 </div>
                 <p className={styles.footerDesc}>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                  {intl.formatMessage({ id: 'footer.description' })}
                 </p>
                 <div className={styles.footerSocial}>
                   {socialLinks.map((link, index) => (
@@ -125,7 +124,7 @@ const Footer: React.FC = () => {
           <div className={styles.copyright}>
             <p>
               <img
-                src="../../assets/img/common/icp.png"
+                src="/assets/img/common/icp.png"
                 alt="ICP"
                 style={{ width: '20px', height: '22px', marginRight: '8px', verticalAlign: 'middle' }}
               />
