@@ -76,7 +76,7 @@ const About: React.FC = () => {
               <p className={styles.quote}>
                 &quot;A gray cat slinks past a wooden house. There&apos;s has something a little intimidating attempting to describe.
               </p>
-              <Link to="/portfolios" className={styles.btnPrimary}>{intl.formatMessage({ id: 'about.myWork' })}</Link>
+              <Link to="/showcase" className={styles.btnPrimary}>{intl.formatMessage({ id: 'about.myWork' })}</Link>
             </Col>
           </Row>
         </div>

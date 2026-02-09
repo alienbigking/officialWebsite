@@ -23,10 +23,10 @@ const Header: React.FC = () => {
 
   const navItems = [
     { path: '/home', label: intl.formatMessage({ id: 'common.home' }) },
-    { path: '/portfolios', label: intl.formatMessage({ id: 'common.portfolios' }) },
-    { path: '/services', label: intl.formatMessage({ id: 'common.services' }) },
+    { path: '/showcase', label: intl.formatMessage({ id: 'common.portfolios' }) },
+    { path: '/learn', label: intl.formatMessage({ id: 'common.services' }) },
     { path: '/about', label: intl.formatMessage({ id: 'common.about' }) },
-    { path: '/blog', label: intl.formatMessage({ id: 'common.blog' }) },
+    { path: '/articles', label: intl.formatMessage({ id: 'common.blog' }) },
     { path: '/contact', label: intl.formatMessage({ id: 'common.contact' }) }
   ]
 

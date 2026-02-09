@@ -116,7 +116,7 @@ const Blog: React.FC = () => {
                       </div>
                     </div>
                     <div className={styles.blogDetails}>
-                      <Link to={`/blog/${post.id}`} className={styles.blogTitleLink}>
+                      <Link to={`/articles/${post.id}`} className={styles.blogTitleLink}>
                         <h2>{post.title}</h2>
                       </Link>
                       <p>{post.excerpt}</p>
@@ -183,7 +183,7 @@ const Blog: React.FC = () => {
                       <div key={post.title} className={styles.recentPostItem}>
                         <img src={post.image} alt={post.title} />
                         <div>
-                          <Link to="/blog/1">{post.title}</Link>
+                          <Link to="/articles/1">{post.title}</Link>
                           <p>{post.date}</p>
                         </div>
                       </div>

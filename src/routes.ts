@@ -14,13 +14,13 @@ export const routes = [
       },
       {
         name: '展示',
-        path: '/portfolios',
-        component: '@/pages/portfolios/components/portfolios'
+        path: '/showcase',
+        component: '@/pages/showcase/components/portfolios'
       },
       {
         name: '科普',
-        path: '/services',
-        component: '@/pages/services/components/services'
+        path: '/learn',
+        component: '@/pages/learn/components/services'
       },
       {
         name: '关于',
@@ -29,19 +29,36 @@ export const routes = [
       },
       {
         name: '文章',
-        path: '/blog',
-        component: '@/pages/blog/components/blog',
+        path: '/articles',
+        component: '@/pages/articles/components/blog',
         exact: true
       },
       {
         name: '文章详情',
-        path: '/blog/:id',
-        component: '@/pages/blog/components/blogDetails'
+        path: '/articles/:id',
+        component: '@/pages/articles/components/blogDetails'
       },
       {
         name: '联系',
         path: '/contact',
         component: '@/pages/contact/components/contact'
+      },
+
+      {
+        path: '/services',
+        redirect: '/learn'
+      },
+      {
+        path: '/portfolios',
+        redirect: '/showcase'
+      },
+      {
+        path: '/blog',
+        component: '@/pages/articles/components/blog'
+      },
+      {
+        path: '/blog/:id',
+        component: '@/pages/articles/components/blogDetails'
       }
     ]
   }

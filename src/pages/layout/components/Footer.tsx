@@ -12,8 +12,9 @@ const Footer: React.FC = () => {
     navigation: [
       { label: intl.formatMessage({ id: 'common.home' }), path: '/' },
       { label: intl.formatMessage({ id: 'common.about' }), path: '/about' },
-      { label: intl.formatMessage({ id: 'common.services' }), path: '/services' },
-      { label: intl.formatMessage({ id: 'common.blog' }), path: '/blog' },
+      { label: intl.formatMessage({ id: 'common.portfolios' }), path: '/showcase' },
+      { label: intl.formatMessage({ id: 'common.services' }), path: '/learn' },
+      { label: intl.formatMessage({ id: 'common.blog' }), path: '/articles' },
       { label: intl.formatMessage({ id: 'common.contact' }), path: '/contact' }
     ],
     contact: [
