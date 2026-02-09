@@ -1,41 +1,41 @@
 export const routes = [
   {
     path: '/',
-    component: '@/pages/layout/layout',
+    component: '@/pages/main',
     routes: [
       {
-        name: 'Home',
+        name: '主页',
         path: '/home',
         component: '@/pages/home/components/home'
       },
       {
-        name: 'Portfolios',
+        name: '个人中心',
         path: '/portfolios',
         component: '@/pages/portfolios/components/portfolios'
       },
       {
-        name: 'Services',
+        name: '服务',
         path: '/services',
         component: '@/pages/services/components/services'
       },
       {
-        name: 'About',
+        name: '关于',
         path: '/about',
         component: '@/pages/about/components/about'
       },
       {
-        name: 'Blog',
+        name: '博客',
         path: '/blog',
         component: '@/pages/blog/components/blog',
         exact: true
       },
       {
-        name: 'Blog Details',
+        name: '博客详情',
         path: '/blog/:id',
         component: '@/pages/blog/components/blogDetails'
       },
       {
-        name: 'Contact',
+        name: '联系',
         path: '/contact',
         component: '@/pages/contact/components/contact'
       }

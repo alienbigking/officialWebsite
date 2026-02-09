@@ -23,7 +23,7 @@ export default {
     contact: '联系方式',
     subscribeNewsletter: '订阅资讯',
     enterEmail: '输入您的邮箱',
-    copyright: '版权所有 | 此模板由',
+    copyright: '版权所有 | 此网页由',
     by: '制作'
   },
   home: {

@@ -23,7 +23,7 @@ export default {
     contact: 'Contact',
     subscribeNewsletter: 'Subscribe Newsletter',
     enterEmail: 'Enter your email',
-    copyright: 'All rights reserved | This template is made with',
+    copyright: 'All rights reserved | This page is made with',
     by: 'by'
   },
   home: {
