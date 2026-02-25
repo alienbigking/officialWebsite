@@ -7,12 +7,22 @@ import styles from './about.less'
 const About: React.FC = () => {
   const intl = useIntl()
   const roboticsImages = {
-    hero1: '/assets/img/robotics/home/hero-1.jpg',
-    hero2: '/assets/img/robotics/home/hero-2.jpg',
-    hero3: '/assets/img/robotics/home/hero-3.jpg',
-    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
-    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
-    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+    hero1: '/assets/img/robotics/figure/about-us-v2-hero-desktop-image.jpg',
+    hero2: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
+    hero3: '/assets/img/robotics/figure/hero-company-image-04.jpg',
+    gallery1: '/assets/img/robotics/figure/video-carousel-01.jpg',
+    gallery2: '/assets/img/robotics/figure/video-carousel-02.jpg',
+    gallery3: '/assets/img/robotics/figure/video-carousel-03.jpg',
+    service1: '/assets/img/robotics/figure/video-carousel-04.jpg',
+    service2: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
+    service3: '/assets/img/robotics/figure/videa_carousell_image.jpg',
+    instagram1: '/assets/img/robotics/figure/bmw_deployment_figure_in_action.jpg',
+    instagram2: '/assets/img/robotics/figure/bmw_update_website_thumb.jpg',
+    instagram3: '/assets/img/robotics/figure/736x590.jpg',
+    instagram4: '/assets/img/robotics/figure/hero-careers-02-image-02.jpg',
+    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
+    instagram6: '/assets/img/robotics/figure/image__69__copy.png',
+    authorAvatar: '/assets/img/robotics/figure/author_image.png'
   }
 
   // 服务数据
@@ -21,19 +31,19 @@ const About: React.FC = () => {
       id: 1,
       title: intl.formatMessage({ id: 'about.services.item1.title' }),
       description: intl.formatMessage({ id: 'about.services.item1.desc' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.service1
     },
     {
       id: 2,
       title: intl.formatMessage({ id: 'about.services.item2.title' }),
       description: intl.formatMessage({ id: 'about.services.item2.desc' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.service2
     },
     {
       id: 3,
       title: intl.formatMessage({ id: 'about.services.item3.title' }),
       description: intl.formatMessage({ id: 'about.services.item3.desc' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.service3
     }
   ]
 
@@ -54,12 +64,12 @@ const About: React.FC = () => {
 
   // Instagram 图片
   const instagramImages = [
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3,
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3
+    roboticsImages.instagram1,
+    roboticsImages.instagram2,
+    roboticsImages.instagram3,
+    roboticsImages.instagram4,
+    roboticsImages.instagram5,
+    roboticsImages.instagram6
   ]
 
   return (
@@ -116,7 +126,7 @@ const About: React.FC = () => {
                   <h2>{item.title}</h2>
                   <p className={styles.testimonialText}>{item.text}</p>
                   <div className={styles.testimonialAuthor}>
-                    <img src={roboticsImages.gallery1} alt="Author" />
+                    <img src={roboticsImages.authorAvatar} alt="Author" />
                     <p>{item.author}</p>
                   </div>
                 </div>

@@ -9,12 +9,21 @@ const Portfolios: React.FC = () => {
   const intl = useIntl()
 
   const roboticsImages = {
-    hero1: '/assets/img/robotics/home/hero-1.jpg',
-    hero2: '/assets/img/robotics/home/hero-2.jpg',
-    hero3: '/assets/img/robotics/home/hero-3.jpg',
-    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
-    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
-    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+    tile1: '/assets/img/robotics/figure/video-carousel-01.jpg',
+    tile2: '/assets/img/robotics/figure/video-carousel-02.jpg',
+    tile3: '/assets/img/robotics/figure/video-carousel-03.jpg',
+    tile4: '/assets/img/robotics/figure/video-carousel-04.jpg',
+    tile5: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
+    tile6: '/assets/img/robotics/figure/videa_carousell_image.jpg',
+    tile7: '/assets/img/robotics/figure/736x590.jpg',
+    tile8: '/assets/img/robotics/figure/bmw_deployment_figure_in_action.jpg',
+    tile9: '/assets/img/robotics/figure/hero-company-image-04.jpg',
+    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
+    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
+    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
+    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
+    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
+    instagram6: '/assets/img/robotics/figure/image__69.png'
   }
 
   // 作品分类
@@ -33,74 +42,74 @@ const Portfolios: React.FC = () => {
       category: 'event',
       title: intl.formatMessage({ id: 'portfolios.items.item1.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item1.subtitle' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.tile1
     },
     {
       id: 2,
       category: 'wedding',
       title: intl.formatMessage({ id: 'portfolios.items.item2.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item2.subtitle' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.tile2
     },
     {
       id: 3,
       category: 'portrait',
       title: intl.formatMessage({ id: 'portfolios.items.item3.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item3.subtitle' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.tile3
     },
     {
       id: 4,
       category: 'nature',
       title: intl.formatMessage({ id: 'portfolios.items.item4.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item4.subtitle' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.tile4
     },
     {
       id: 5,
       category: 'event',
       title: intl.formatMessage({ id: 'portfolios.items.item5.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item5.subtitle' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.tile5
     },
     {
       id: 6,
       category: 'wedding',
       title: intl.formatMessage({ id: 'portfolios.items.item6.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item6.subtitle' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.tile6
     },
     {
       id: 7,
       category: 'portrait',
       title: intl.formatMessage({ id: 'portfolios.items.item7.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item7.subtitle' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.tile7
     },
     {
       id: 8,
       category: 'nature',
       title: intl.formatMessage({ id: 'portfolios.items.item8.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item8.subtitle' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.tile8
     },
     {
       id: 9,
       category: 'event',
       title: intl.formatMessage({ id: 'portfolios.items.item9.title' }),
       subtitle: intl.formatMessage({ id: 'portfolios.items.item9.subtitle' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.tile9
     }
   ]
 
   // Instagram 图片
   const instagramImages = [
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3,
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3
+    roboticsImages.instagram1,
+    roboticsImages.instagram2,
+    roboticsImages.instagram3,
+    roboticsImages.instagram4,
+    roboticsImages.instagram5,
+    roboticsImages.instagram6
   ]
 
   // 过滤作品

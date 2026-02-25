@@ -9,12 +9,28 @@ const Home: React.FC = () => {
   const intl = useIntl()
 
   const roboticsImages = {
-    hero1: '/assets/img/robotics/home/hero-1.jpg',
-    hero2: '/assets/img/robotics/home/hero-2.jpg',
-    hero3: '/assets/img/robotics/home/hero-3.jpg',
-    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
-    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
-    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+    hero1: '/assets/img/robotics/figure/hero-company-image-04.jpg',
+    hero2: '/assets/img/robotics/figure/hero-figure-03-image-02.jpg',
+    hero3: '/assets/img/robotics/figure/hero-careers-02-image-02.jpg',
+    aboutSig: '/assets/img/robotics/figure/video-carousel-04.jpg',
+    aboutMain: '/assets/img/robotics/figure/bmw_deployment_figure_in_action.jpg',
+    aboutBadge: '/assets/img/robotics/figure/video-carousel-03.jpg',
+    gallery1: '/assets/img/robotics/figure/video-carousel-01.jpg',
+    gallery2: '/assets/img/robotics/figure/video-carousel-02.jpg',
+    gallery3: '/assets/img/robotics/figure/video-carousel-03.jpg',
+    gallery4: '/assets/img/robotics/figure/video-carousel-04.jpg',
+    gallery5: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
+    gallery6: '/assets/img/robotics/figure/videa_carousell_image.jpg',
+    service1: '/assets/img/robotics/figure/736x590.jpg',
+    service2: '/assets/img/robotics/figure/bmw_update_website_thumb.jpg',
+    service3: '/assets/img/robotics/figure/generic-page-image.jpeg',
+    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
+    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
+    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
+    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
+    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
+    instagram6: '/assets/img/robotics/figure/image__69.png',
+    authorAvatar: '/assets/img/robotics/figure/author_image.png'
   }
 
   // 轮播图数据
@@ -63,19 +79,19 @@ const Home: React.FC = () => {
       id: 4,
       category: intl.formatMessage({ id: 'home.gallery.item4.category' }),
       title: intl.formatMessage({ id: 'home.gallery.item4.title' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.gallery4
     },
     {
       id: 5,
       category: intl.formatMessage({ id: 'home.gallery.item5.category' }),
       title: intl.formatMessage({ id: 'home.gallery.item5.title' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.gallery5
     },
     {
       id: 6,
       category: intl.formatMessage({ id: 'home.gallery.item6.category' }),
       title: intl.formatMessage({ id: 'home.gallery.item6.title' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.gallery6
     }
   ]
 
@@ -85,19 +101,19 @@ const Home: React.FC = () => {
       id: 1,
       title: intl.formatMessage({ id: 'home.learn.item1.title' }),
       description: intl.formatMessage({ id: 'home.learn.item1.desc' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.service1
     },
     {
       id: 2,
       title: intl.formatMessage({ id: 'home.learn.item2.title' }),
       description: intl.formatMessage({ id: 'home.learn.item2.desc' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.service2
     },
     {
       id: 3,
       title: intl.formatMessage({ id: 'home.learn.item3.title' }),
       description: intl.formatMessage({ id: 'home.learn.item3.desc' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.service3
     }
   ]
 
@@ -158,12 +174,12 @@ const Home: React.FC = () => {
 
   // Instagram 图片
   const instagramImages = [
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3,
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3
+    roboticsImages.instagram1,
+    roboticsImages.instagram2,
+    roboticsImages.instagram3,
+    roboticsImages.instagram4,
+    roboticsImages.instagram5,
+    roboticsImages.instagram6
   ]
 
   return (
@@ -205,18 +221,18 @@ const Home: React.FC = () => {
                   {intl.formatMessage({ id: 'home.about.desc' })}
                 </p>
                 <div className={styles.signature}>
-                  <img src={roboticsImages.gallery2} alt="Robot learning scene" />
+                  <img src={roboticsImages.aboutSig} alt="Robot learning scene" />
                 </div>
               </div>
             </Col>
             <Col xs={24} md={8}>
               <div className={styles.aboutImage}>
-                <img src={roboticsImages.gallery1} alt="Humanoid robot" />
+                <img src={roboticsImages.aboutMain} alt="Humanoid robot" />
               </div>
             </Col>
             <Col xs={24} md={6}>
               <div className={styles.experience}>
-                <img src={roboticsImages.gallery3} alt="Research scene" />
+                <img src={roboticsImages.aboutBadge} alt="Research scene" />
                 <p>{intl.formatMessage({ id: 'home.about.badge' })}</p>
               </div>
               <p className={styles.quote}>
@@ -282,7 +298,7 @@ const Home: React.FC = () => {
                   <h2>{item.title}</h2>
                   <p className={styles.testimonialText}>{item.text}</p>
                   <div className={styles.testimonialAuthor}>
-                    <img src={roboticsImages.gallery1} alt="Author" />
+                    <img src={roboticsImages.authorAvatar} alt="Author" />
                     <p>{item.author}</p>
                   </div>
                 </div>

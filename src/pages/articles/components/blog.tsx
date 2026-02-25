@@ -9,12 +9,21 @@ const Blog: React.FC = () => {
   const intl = useIntl()
 
   const roboticsImages = {
-    hero1: '/assets/img/robotics/home/hero-1.jpg',
-    hero2: '/assets/img/robotics/home/hero-2.jpg',
-    hero3: '/assets/img/robotics/home/hero-3.jpg',
-    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
-    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
-    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+    post1: '/assets/img/robotics/figure/hero-company-image-04.jpg',
+    post2: '/assets/img/robotics/figure/hero-figure-03-image-02.jpg',
+    post3: '/assets/img/robotics/figure/hero-careers-02-image-02.jpg',
+    post4: '/assets/img/robotics/figure/video-carousel-01.jpg',
+    post5: '/assets/img/robotics/figure/video-carousel-02.jpg',
+    recent1: '/assets/img/robotics/figure/video-carousel-03.jpg',
+    recent2: '/assets/img/robotics/figure/video-carousel-04.jpg',
+    recent3: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
+    recent4: '/assets/img/robotics/figure/videa_carousell_image.jpg',
+    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
+    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
+    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
+    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
+    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
+    instagram6: '/assets/img/robotics/figure/image__69.png'
   }
 
   const blogPosts = [
@@ -22,7 +31,7 @@ const Blog: React.FC = () => {
       id: 1,
       title: intl.formatMessage({ id: 'blog.posts.post1.title' }),
       excerpt: intl.formatMessage({ id: 'blog.posts.post1.excerpt' }),
-      image: roboticsImages.hero1,
+      image: roboticsImages.post1,
       day: '15',
       month: 'Jan',
       categories: intl.formatMessage({ id: 'blog.posts.post1.categories' }),
@@ -32,7 +41,7 @@ const Blog: React.FC = () => {
       id: 2,
       title: intl.formatMessage({ id: 'blog.posts.post2.title' }),
       excerpt: intl.formatMessage({ id: 'blog.posts.post2.excerpt' }),
-      image: roboticsImages.hero2,
+      image: roboticsImages.post2,
       day: '16',
       month: 'Jan',
       categories: intl.formatMessage({ id: 'blog.posts.post2.categories' }),
@@ -42,7 +51,7 @@ const Blog: React.FC = () => {
       id: 3,
       title: intl.formatMessage({ id: 'blog.posts.post3.title' }),
       excerpt: intl.formatMessage({ id: 'blog.posts.post3.excerpt' }),
-      image: roboticsImages.hero3,
+      image: roboticsImages.post3,
       day: '18',
       month: 'Jan',
       categories: intl.formatMessage({ id: 'blog.posts.post3.categories' }),
@@ -52,7 +61,7 @@ const Blog: React.FC = () => {
       id: 4,
       title: intl.formatMessage({ id: 'blog.posts.post4.title' }),
       excerpt: intl.formatMessage({ id: 'blog.posts.post4.excerpt' }),
-      image: roboticsImages.gallery1,
+      image: roboticsImages.post4,
       day: '20',
       month: 'Jan',
       categories: intl.formatMessage({ id: 'blog.posts.post4.categories' }),
@@ -62,7 +71,7 @@ const Blog: React.FC = () => {
       id: 5,
       title: intl.formatMessage({ id: 'blog.posts.post5.title' }),
       excerpt: intl.formatMessage({ id: 'blog.posts.post5.excerpt' }),
-      image: roboticsImages.gallery2,
+      image: roboticsImages.post5,
       day: '22',
       month: 'Jan',
       categories: intl.formatMessage({ id: 'blog.posts.post5.categories' }),
@@ -83,22 +92,22 @@ const Blog: React.FC = () => {
     {
       title: intl.formatMessage({ id: 'blog.sidebar.recent.post1.title' }),
       date: intl.formatMessage({ id: 'blog.sidebar.recent.post1.date' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.recent1
     },
     {
       title: intl.formatMessage({ id: 'blog.sidebar.recent.post2.title' }),
       date: intl.formatMessage({ id: 'blog.sidebar.recent.post2.date' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.recent2
     },
     {
       title: intl.formatMessage({ id: 'blog.sidebar.recent.post3.title' }),
       date: intl.formatMessage({ id: 'blog.sidebar.recent.post3.date' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.recent3
     },
     {
       title: intl.formatMessage({ id: 'blog.sidebar.recent.post4.title' }),
       date: intl.formatMessage({ id: 'blog.sidebar.recent.post4.date' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.recent4
     }
   ]
 
@@ -113,12 +122,12 @@ const Blog: React.FC = () => {
     intl.formatMessage({ id: 'blog.sidebar.tags.tag8' })
   ]
   const instagramFeeds = [
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3,
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3
+    roboticsImages.instagram1,
+    roboticsImages.instagram2,
+    roboticsImages.instagram3,
+    roboticsImages.instagram4,
+    roboticsImages.instagram5,
+    roboticsImages.instagram6
   ]
 
   return (

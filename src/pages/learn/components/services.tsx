@@ -7,12 +7,19 @@ import styles from './services.less'
 const Services: React.FC = () => {
   const intl = useIntl()
   const roboticsImages = {
-    hero1: '/assets/img/robotics/home/hero-1.jpg',
-    hero2: '/assets/img/robotics/home/hero-2.jpg',
-    hero3: '/assets/img/robotics/home/hero-3.jpg',
-    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
-    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
-    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+    card1: '/assets/img/robotics/figure/video-carousel-01.jpg',
+    card2: '/assets/img/robotics/figure/video-carousel-02.jpg',
+    card3: '/assets/img/robotics/figure/video-carousel-03.jpg',
+    card4: '/assets/img/robotics/figure/video-carousel-04.jpg',
+    card5: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
+    card6: '/assets/img/robotics/figure/videa_carousell_image.jpg',
+    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
+    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
+    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
+    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
+    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
+    instagram6: '/assets/img/robotics/figure/image__69.png',
+    authorAvatar: '/assets/img/robotics/figure/author_image.png'
   }
 
   // 服务数据
@@ -21,37 +28,37 @@ const Services: React.FC = () => {
       id: 1,
       title: intl.formatMessage({ id: 'services.cards.item1.title' }),
       description: intl.formatMessage({ id: 'services.cards.item1.desc' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.card1
     },
     {
       id: 2,
       title: intl.formatMessage({ id: 'services.cards.item2.title' }),
       description: intl.formatMessage({ id: 'services.cards.item2.desc' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.card2
     },
     {
       id: 3,
       title: intl.formatMessage({ id: 'services.cards.item3.title' }),
       description: intl.formatMessage({ id: 'services.cards.item3.desc' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.card3
     },
     {
       id: 4,
       title: intl.formatMessage({ id: 'services.cards.item4.title' }),
       description: intl.formatMessage({ id: 'services.cards.item4.desc' }),
-      image: roboticsImages.gallery1
+      image: roboticsImages.card4
     },
     {
       id: 5,
       title: intl.formatMessage({ id: 'services.cards.item5.title' }),
       description: intl.formatMessage({ id: 'services.cards.item5.desc' }),
-      image: roboticsImages.gallery2
+      image: roboticsImages.card5
     },
     {
       id: 6,
       title: intl.formatMessage({ id: 'services.cards.item6.title' }),
       description: intl.formatMessage({ id: 'services.cards.item6.desc' }),
-      image: roboticsImages.gallery3
+      image: roboticsImages.card6
     }
   ]
 
@@ -112,12 +119,12 @@ const Services: React.FC = () => {
 
   // Instagram 图片
   const instagramImages = [
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3,
-    roboticsImages.gallery1,
-    roboticsImages.gallery2,
-    roboticsImages.gallery3
+    roboticsImages.instagram1,
+    roboticsImages.instagram2,
+    roboticsImages.instagram3,
+    roboticsImages.instagram4,
+    roboticsImages.instagram5,
+    roboticsImages.instagram6
   ]
 
   return (
@@ -162,7 +169,7 @@ const Services: React.FC = () => {
                   <h2>{item.title}</h2>
                   <p className={styles.testimonialText}>{item.text}</p>
                   <div className={styles.testimonialAuthor}>
-                    <img src={roboticsImages.gallery1} alt="Author" />
+                    <img src={roboticsImages.authorAvatar} alt="Author" />
                     <p>{item.author}</p>
                   </div>
                 </div>
