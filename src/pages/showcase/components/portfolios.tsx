@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Col, Carousel } from 'antd'
+import { Row, Col } from 'antd'
 import { useIntl } from '@umijs/max'
 import ShowcaseImageCarousel from '@/components/ShowcaseImageCarousel'
 import styles from './portfolios.less'
@@ -7,6 +7,15 @@ import styles from './portfolios.less'
 const Portfolios: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all')
   const intl = useIntl()
+
+  const roboticsImages = {
+    hero1: '/assets/img/robotics/home/hero-1.jpg',
+    hero2: '/assets/img/robotics/home/hero-2.jpg',
+    hero3: '/assets/img/robotics/home/hero-3.jpg',
+    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
+    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
+    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+  }
 
   // 作品分类
   const categories = [
@@ -19,25 +28,79 @@ const Portfolios: React.FC = () => {
 
   // 作品数据
   const portfolioItems = [
-    { id: 1, category: 'nature', title: 'Miami Lake', subtitle: 'Nature Beauty', image: '/assets/img/gallery/gallery1.jpg' },
-    { id: 2, category: 'portrait', title: 'Street Shot', subtitle: 'Portrait', image: '/assets/img/gallery/gallery2.jpg' },
-    { id: 3, category: 'wedding', title: 'Wedding Day', subtitle: 'Wedding', image: '/assets/img/gallery/gallery3.jpg' },
-    { id: 4, category: 'event', title: 'Event Shot', subtitle: 'Event', image: '/assets/img/gallery/gallery4.jpg' },
-    { id: 5, category: 'nature', title: 'Mountain View', subtitle: 'Nature Beauty', image: '/assets/img/gallery/gallery5.jpg' },
-    { id: 6, category: 'portrait', title: 'Portrait Shot', subtitle: 'Portrait', image: '/assets/img/gallery/gallery6.jpg' },
-    { id: 7, category: 'wedding', title: 'Love Story', subtitle: 'Wedding', image: '/assets/img/gallery/gallery1.jpg' },
-    { id: 8, category: 'event', title: 'Party Time', subtitle: 'Event', image: '/assets/img/gallery/gallery2.jpg' },
-    { id: 9, category: 'nature', title: 'Sunset', subtitle: 'Nature Beauty', image: '/assets/img/gallery/gallery3.jpg' }
+    {
+      id: 1,
+      category: 'event',
+      title: intl.formatMessage({ id: 'portfolios.items.item1.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item1.subtitle' }),
+      image: roboticsImages.gallery1
+    },
+    {
+      id: 2,
+      category: 'wedding',
+      title: intl.formatMessage({ id: 'portfolios.items.item2.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item2.subtitle' }),
+      image: roboticsImages.gallery2
+    },
+    {
+      id: 3,
+      category: 'portrait',
+      title: intl.formatMessage({ id: 'portfolios.items.item3.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item3.subtitle' }),
+      image: roboticsImages.gallery3
+    },
+    {
+      id: 4,
+      category: 'nature',
+      title: intl.formatMessage({ id: 'portfolios.items.item4.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item4.subtitle' }),
+      image: roboticsImages.gallery1
+    },
+    {
+      id: 5,
+      category: 'event',
+      title: intl.formatMessage({ id: 'portfolios.items.item5.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item5.subtitle' }),
+      image: roboticsImages.gallery2
+    },
+    {
+      id: 6,
+      category: 'wedding',
+      title: intl.formatMessage({ id: 'portfolios.items.item6.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item6.subtitle' }),
+      image: roboticsImages.gallery3
+    },
+    {
+      id: 7,
+      category: 'portrait',
+      title: intl.formatMessage({ id: 'portfolios.items.item7.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item7.subtitle' }),
+      image: roboticsImages.gallery1
+    },
+    {
+      id: 8,
+      category: 'nature',
+      title: intl.formatMessage({ id: 'portfolios.items.item8.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item8.subtitle' }),
+      image: roboticsImages.gallery2
+    },
+    {
+      id: 9,
+      category: 'event',
+      title: intl.formatMessage({ id: 'portfolios.items.item9.title' }),
+      subtitle: intl.formatMessage({ id: 'portfolios.items.item9.subtitle' }),
+      image: roboticsImages.gallery3
+    }
   ]
 
   // Instagram 图片
   const instagramImages = [
-    '/assets/img/gallery/instra1.jpg',
-    '/assets/img/gallery/instra2.jpg',
-    '/assets/img/gallery/instra3.jpg',
-    '/assets/img/gallery/instra4.jpg',
-    '/assets/img/gallery/instra5.jpg',
-    '/assets/img/gallery/instra2.jpg'
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3,
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3
   ]
 
   // 过滤作品

@@ -6,36 +6,60 @@ import styles from './about.less'
 
 const About: React.FC = () => {
   const intl = useIntl()
+  const roboticsImages = {
+    hero1: '/assets/img/robotics/home/hero-1.jpg',
+    hero2: '/assets/img/robotics/home/hero-2.jpg',
+    hero3: '/assets/img/robotics/home/hero-3.jpg',
+    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
+    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
+    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+  }
+
   // 服务数据
   const services = [
     {
       id: 1,
-      title: 'Event Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog01.jpg'
+      title: intl.formatMessage({ id: 'about.services.item1.title' }),
+      description: intl.formatMessage({ id: 'about.services.item1.desc' }),
+      image: roboticsImages.gallery1
     },
     {
       id: 2,
-      title: 'Wedding Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog02.jpg'
+      title: intl.formatMessage({ id: 'about.services.item2.title' }),
+      description: intl.formatMessage({ id: 'about.services.item2.desc' }),
+      image: roboticsImages.gallery2
     },
     {
       id: 3,
-      title: 'Family Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog03.jpg'
+      title: intl.formatMessage({ id: 'about.services.item3.title' }),
+      description: intl.formatMessage({ id: 'about.services.item3.desc' }),
+      image: roboticsImages.gallery3
+    }
+  ]
+
+  const testimonials = [
+    {
+      id: 1,
+      title: intl.formatMessage({ id: 'about.testimonial.item1.title' }),
+      text: intl.formatMessage({ id: 'about.testimonial.item1.text' }),
+      author: intl.formatMessage({ id: 'about.testimonial.item1.author' })
+    },
+    {
+      id: 2,
+      title: intl.formatMessage({ id: 'about.testimonial.item2.title' }),
+      text: intl.formatMessage({ id: 'about.testimonial.item2.text' }),
+      author: intl.formatMessage({ id: 'about.testimonial.item2.author' })
     }
   ]
 
   // Instagram 图片
   const instagramImages = [
-    '/assets/img/gallery/instra1.jpg',
-    '/assets/img/gallery/instra2.jpg',
-    '/assets/img/gallery/instra3.jpg',
-    '/assets/img/gallery/instra4.jpg',
-    '/assets/img/gallery/instra5.jpg',
-    '/assets/img/gallery/instra2.jpg'
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3,
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3
   ]
 
   return (
@@ -54,27 +78,27 @@ const About: React.FC = () => {
           <Row gutter={[32, 32]} align="middle">
             <Col xs={24} md={10}>
               <div className={styles.aboutText}>
-                <h2 className={styles.sectionTitle}>I Click Moment, that you love</h2>
+                <h2 className={styles.sectionTitle}>{intl.formatMessage({ id: 'about.section.title' })}</h2>
                 <p className={styles.aboutDescription}>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.
+                  {intl.formatMessage({ id: 'about.section.desc' })}
                 </p>
                 <div className={styles.signature}>
-                  <img src="/assets/img/gallery/singneture.png" alt="Signature" />
+                  <img src={roboticsImages.hero2} alt="Robot" />
                 </div>
               </div>
             </Col>
             <Col xs={24} md={8}>
               <div className={styles.aboutImage}>
-                <img src="/assets/img/gallery/about1.jpg" alt="About" />
+                <img src={roboticsImages.hero1} alt="About" />
               </div>
             </Col>
             <Col xs={24} md={6}>
               <div className={styles.experience}>
-                <img src="/assets/img/gallery/years.png" alt="Years" />
-                <p>Years of Experience</p>
+                <img src={roboticsImages.hero3} alt="Research" />
+                <p>{intl.formatMessage({ id: 'about.section.badge' })}</p>
               </div>
               <p className={styles.quote}>
-                &quot;A gray cat slinks past a wooden house. There&apos;s has something a little intimidating attempting to describe.
+                {intl.formatMessage({ id: 'about.section.quote' })}
               </p>
               <Link to="/showcase" className={styles.btnPrimary}>{intl.formatMessage({ id: 'about.myWork' })}</Link>
             </Col>
@@ -86,16 +110,14 @@ const About: React.FC = () => {
       <section className={styles.testimonialSection}>
         <div className={styles.container}>
           <Carousel autoplay autoplaySpeed={5000} dots={false}>
-            {[1, 2].map((num) => (
-              <div key={num}>
+            {testimonials.map((item) => (
+              <div key={item.id}>
                 <div className={styles.testimonialItem}>
-                  <h2>Testimonial</h2>
-                  <p className={styles.testimonialText}>
-                    &quot;Vivamus aliquet felis eu diam ultricies congue. Morbi porta lorem nec consectetur porta. Sed quis dui elit. Pellentesque habitant morbi tristique senectus et netus et male Sed vestibulum orci&quot;
-                  </p>
+                  <h2>{item.title}</h2>
+                  <p className={styles.testimonialText}>{item.text}</p>
                   <div className={styles.testimonialAuthor}>
-                    <img src="/assets/img/gallery/founder-img.png" alt="Author" />
-                    <p>Graham Cracker, Designer at Colorlib</p>
+                    <img src={roboticsImages.gallery1} alt="Author" />
+                    <p>{item.author}</p>
                   </div>
                 </div>
               </div>
@@ -107,7 +129,7 @@ const About: React.FC = () => {
       {/* Services Section */}
       <section className={styles.servicesSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>I do for you</h2>
+          <h2 className={styles.sectionTitle}>{intl.formatMessage({ id: 'about.services.title' })}</h2>
           <Row gutter={[24, 24]}>
             {services.map((service) => (
               <Col key={service.id} xs={24} md={8}>

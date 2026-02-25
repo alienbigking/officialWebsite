@@ -134,10 +134,10 @@ const Footer: React.FC = () => {
               </a>
             </p>
             <p>
-              {intl.formatMessage({ id: 'footer.copyright' })} &copy; {currentYear} ❤️ {intl.formatMessage({ id: 'footer.by' })}{' '}
-              <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">
+              {intl.formatMessage({ id: 'footer.copyright' })} &copy; {currentYear}
+              {/* <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">
                 Colorlib
-              </a>
+              </a> */}
             </p>
           </div>
         </div>

@@ -6,43 +6,52 @@ import styles from './services.less'
 
 const Services: React.FC = () => {
   const intl = useIntl()
+  const roboticsImages = {
+    hero1: '/assets/img/robotics/home/hero-1.jpg',
+    hero2: '/assets/img/robotics/home/hero-2.jpg',
+    hero3: '/assets/img/robotics/home/hero-3.jpg',
+    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
+    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
+    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+  }
+
   // 服务数据
   const services = [
     {
       id: 1,
-      title: 'Event Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog01.jpg'
+      title: intl.formatMessage({ id: 'services.cards.item1.title' }),
+      description: intl.formatMessage({ id: 'services.cards.item1.desc' }),
+      image: roboticsImages.gallery1
     },
     {
       id: 2,
-      title: 'Wedding Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog02.jpg'
+      title: intl.formatMessage({ id: 'services.cards.item2.title' }),
+      description: intl.formatMessage({ id: 'services.cards.item2.desc' }),
+      image: roboticsImages.gallery2
     },
     {
       id: 3,
-      title: 'Family Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog03.jpg'
+      title: intl.formatMessage({ id: 'services.cards.item3.title' }),
+      description: intl.formatMessage({ id: 'services.cards.item3.desc' }),
+      image: roboticsImages.gallery3
     },
     {
       id: 4,
-      title: 'Portrait Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog01.jpg'
+      title: intl.formatMessage({ id: 'services.cards.item4.title' }),
+      description: intl.formatMessage({ id: 'services.cards.item4.desc' }),
+      image: roboticsImages.gallery1
     },
     {
       id: 5,
-      title: 'Commercial Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog02.jpg'
+      title: intl.formatMessage({ id: 'services.cards.item5.title' }),
+      description: intl.formatMessage({ id: 'services.cards.item5.desc' }),
+      image: roboticsImages.gallery2
     },
     {
       id: 6,
-      title: 'Product Photography',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.',
-      image: '/assets/img/gallery/blog03.jpg'
+      title: intl.formatMessage({ id: 'services.cards.item6.title' }),
+      description: intl.formatMessage({ id: 'services.cards.item6.desc' }),
+      image: roboticsImages.gallery3
     }
   ]
 
@@ -50,50 +59,65 @@ const Services: React.FC = () => {
   const pricingPlans = [
     {
       id: 1,
-      name: 'Photography',
-      price: 400,
+      name: intl.formatMessage({ id: 'services.pricing.plan1.name' }),
+      price: 0,
       features: [
-        'Sed ut perspiciatis unde omnis iste.',
-        'Natus error sit voluptatem.',
-        'Accusantium Doloremque lauda',
-        'Totam rem aperiam.',
-        'Eaque ipsa quae.'
+        intl.formatMessage({ id: 'services.pricing.plan1.feature1' }),
+        intl.formatMessage({ id: 'services.pricing.plan1.feature2' }),
+        intl.formatMessage({ id: 'services.pricing.plan1.feature3' }),
+        intl.formatMessage({ id: 'services.pricing.plan1.feature4' }),
+        intl.formatMessage({ id: 'services.pricing.plan1.feature5' })
       ]
     },
     {
       id: 2,
-      name: 'Photography',
-      price: 400,
+      name: intl.formatMessage({ id: 'services.pricing.plan2.name' }),
+      price: 99,
       features: [
-        'Sed ut perspiciatis unde omnis iste.',
-        'Natus error sit voluptatem.',
-        'Accusantium Doloremque lauda',
-        'Totam rem aperiam.',
-        'Eaque ipsa quae.'
+        intl.formatMessage({ id: 'services.pricing.plan2.feature1' }),
+        intl.formatMessage({ id: 'services.pricing.plan2.feature2' }),
+        intl.formatMessage({ id: 'services.pricing.plan2.feature3' }),
+        intl.formatMessage({ id: 'services.pricing.plan2.feature4' }),
+        intl.formatMessage({ id: 'services.pricing.plan2.feature5' })
       ]
     },
     {
       id: 3,
-      name: 'Photography',
-      price: 400,
+      name: intl.formatMessage({ id: 'services.pricing.plan3.name' }),
+      price: 299,
       features: [
-        'Sed ut perspiciatis unde omnis iste.',
-        'Natus error sit voluptatem.',
-        'Accusantium Doloremque lauda',
-        'Totam rem aperiam.',
-        'Eaque ipsa quae.'
+        intl.formatMessage({ id: 'services.pricing.plan3.feature1' }),
+        intl.formatMessage({ id: 'services.pricing.plan3.feature2' }),
+        intl.formatMessage({ id: 'services.pricing.plan3.feature3' }),
+        intl.formatMessage({ id: 'services.pricing.plan3.feature4' }),
+        intl.formatMessage({ id: 'services.pricing.plan3.feature5' })
       ]
+    }
+  ]
+
+  const testimonials = [
+    {
+      id: 1,
+      title: intl.formatMessage({ id: 'services.testimonial.item1.title' }),
+      text: intl.formatMessage({ id: 'services.testimonial.item1.text' }),
+      author: intl.formatMessage({ id: 'services.testimonial.item1.author' })
+    },
+    {
+      id: 2,
+      title: intl.formatMessage({ id: 'services.testimonial.item2.title' }),
+      text: intl.formatMessage({ id: 'services.testimonial.item2.text' }),
+      author: intl.formatMessage({ id: 'services.testimonial.item2.author' })
     }
   ]
 
   // Instagram 图片
   const instagramImages = [
-    '/assets/img/gallery/instra1.jpg',
-    '/assets/img/gallery/instra2.jpg',
-    '/assets/img/gallery/instra3.jpg',
-    '/assets/img/gallery/instra4.jpg',
-    '/assets/img/gallery/instra5.jpg',
-    '/assets/img/gallery/instra2.jpg'
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3,
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3
   ]
 
   return (
@@ -109,7 +133,7 @@ const Services: React.FC = () => {
       {/* Services Section */}
       <section className={styles.servicesSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>I do for you</h2>
+          <h2 className={styles.sectionTitle}>{intl.formatMessage({ id: 'services.sectionTitle' })}</h2>
           <Row gutter={[24, 24]}>
             {services.map((service) => (
               <Col key={service.id} xs={24} md={8}>
@@ -132,16 +156,14 @@ const Services: React.FC = () => {
       <section className={styles.testimonialSection}>
         <div className={styles.container}>
           <Carousel autoplay autoplaySpeed={5000} dots={false}>
-            {[1, 2].map((num) => (
-              <div key={num}>
+            {testimonials.map((item) => (
+              <div key={item.id}>
                 <div className={styles.testimonialItem}>
-                  <h2>Testimonial</h2>
-                  <p className={styles.testimonialText}>
-                    &quot;Vivamus aliquet felis eu diam ultricies congue. Morbi porta lorem nec consectetur porta. Sed quis dui elit. Pellentesque habitant morbi tristique senectus et netus et male Sed vestibulum orci&quot;
-                  </p>
+                  <h2>{item.title}</h2>
+                  <p className={styles.testimonialText}>{item.text}</p>
                   <div className={styles.testimonialAuthor}>
-                    <img src="/assets/img/gallery/founder-img.png" alt="Author" />
-                    <p>Graham Cracker, Designer at Colorlib</p>
+                    <img src={roboticsImages.gallery1} alt="Author" />
+                    <p>{item.author}</p>
                   </div>
                 </div>
               </div>
@@ -153,7 +175,7 @@ const Services: React.FC = () => {
       {/* Pricing Section */}
       <section className={styles.pricingSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitleCenter}>Choose a plan that suit you</h2>
+          <h2 className={styles.sectionTitleCenter}>{intl.formatMessage({ id: 'services.pricing.title' })}</h2>
           <Row gutter={[24, 24]} justify="center">
             {pricingPlans.map((plan) => (
               <Col key={plan.id} xs={24} sm={16} md={8}>
@@ -170,7 +192,9 @@ const Services: React.FC = () => {
                         <li key={index}>{feature}</li>
                       ))}
                     </ul>
-                    <button type="button" className={styles.btnOutline}>Choose This Plan</button>
+                    <button type="button" className={styles.btnOutline}>
+                      {intl.formatMessage({ id: 'services.pricing.cta' })}
+                    </button>
                   </div>
                 </div>
               </Col>

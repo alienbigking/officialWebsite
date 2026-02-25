@@ -6,27 +6,27 @@ import styles from './contact.less'
 
 const { TextArea } = Input
 
-const contactInfo = [
-  {
-    icon: <EnvironmentOutlined />,
-    title: 'China',
-    text: 'DeepSea SpaceTech'
-  },
-  {
-    icon: <PhoneOutlined />,
-    title: '+86 (000) 0000-0000',
-    text: 'Mon to Fri 9am to 6pm'
-  },
-  {
-    icon: <MailOutlined />,
-    title: '1260213657@qq.com',
-    text: 'Send us your query anytime!'
-  }
-]
-
 const Contact: React.FC = () => {
   const [form] = Form.useForm()
   const intl = useIntl()
+
+  const contactInfo = [
+    {
+      icon: <EnvironmentOutlined />,
+      title: intl.formatMessage({ id: 'contact.info.address.title' }),
+      text: intl.formatMessage({ id: 'contact.info.address.text' })
+    },
+    {
+      icon: <PhoneOutlined />,
+      title: intl.formatMessage({ id: 'contact.info.phone.title' }),
+      text: intl.formatMessage({ id: 'contact.info.phone.text' })
+    },
+    {
+      icon: <MailOutlined />,
+      title: intl.formatMessage({ id: 'contact.info.email.title' }),
+      text: intl.formatMessage({ id: 'contact.info.email.text' })
+    }
+  ]
 
   const onFinish = (values: any) => {
     console.log('Form values:', values)
@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
                 <Form form={form} onFinish={onFinish} layout="vertical" className={styles.contactForm}>
                   <Form.Item
                     name="message"
-                    rules={[{ required: true, message: 'Please enter your message' }]}
+                    rules={[{ required: true, message: intl.formatMessage({ id: 'contact.validation.message' }) }]}
                   >
                     <Input.TextArea rows={6} placeholder={intl.formatMessage({ id: 'contact.enterMessage' })} />
                   </Form.Item>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                     <Col xs={24} sm={12}>
                       <Form.Item
                         name="name"
-                        rules={[{ required: true, message: 'Please enter your name' }]}
+                        rules={[{ required: true, message: intl.formatMessage({ id: 'contact.validation.name' }) }]}
                       >
                         <Input placeholder={intl.formatMessage({ id: 'contact.enterName' })} />
                       </Form.Item>
@@ -81,8 +81,8 @@ const Contact: React.FC = () => {
                       <Form.Item
                         name="email"
                         rules={[
-                          { required: true, message: 'Please enter your email' },
-                          { type: 'email', message: 'Please enter a valid email' }
+                          { required: true, message: intl.formatMessage({ id: 'contact.validation.emailRequired' }) },
+                          { type: 'email', message: intl.formatMessage({ id: 'contact.validation.emailInvalid' }) }
                         ]}
                       >
                         <Input type="email" placeholder={intl.formatMessage({ id: 'contact.enterEmail' })} />
@@ -92,7 +92,7 @@ const Contact: React.FC = () => {
 
                   <Form.Item
                     name="subject"
-                    rules={[{ required: true, message: 'Please enter subject' }]}
+                    rules={[{ required: true, message: intl.formatMessage({ id: 'contact.validation.subject' }) }]}
                   >
                     <Input placeholder={intl.formatMessage({ id: 'contact.enterSubject' })} />
                   </Form.Item>

@@ -8,88 +8,117 @@ const Blog: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const intl = useIntl()
 
+  const roboticsImages = {
+    hero1: '/assets/img/robotics/home/hero-1.jpg',
+    hero2: '/assets/img/robotics/home/hero-2.jpg',
+    hero3: '/assets/img/robotics/home/hero-3.jpg',
+    gallery1: '/assets/img/robotics/home/gallery-1.jpg',
+    gallery2: '/assets/img/robotics/home/gallery-2.jpg',
+    gallery3: '/assets/img/robotics/home/gallery-3.jpg'
+  }
+
   const blogPosts = [
     {
       id: 1,
-      title: 'Google inks pact for new 35-storey office',
-      excerpt:
-        'That dominion stars lights dominion divide years for fourth have don\'t stars is that he earth it first without heaven in place seed it second morning saying.',
-      image: '/assets/img/blog/single_blog_1.jpg',
+      title: intl.formatMessage({ id: 'blog.posts.post1.title' }),
+      excerpt: intl.formatMessage({ id: 'blog.posts.post1.excerpt' }),
+      image: roboticsImages.hero1,
       day: '15',
       month: 'Jan',
-      categories: 'Travel, Lifestyle',
-      comments: '03 Comments'
+      categories: intl.formatMessage({ id: 'blog.posts.post1.categories' }),
+      comments: intl.formatMessage({ id: 'blog.posts.post1.comments' })
     },
     {
       id: 2,
-      title: 'Google inks pact for new 35-storey office',
-      excerpt:
-        'That dominion stars lights dominion divide years for fourth have don\'t stars is that he earth it first without heaven in place seed it second morning saying.',
-      image: '/assets/img/blog/single_blog_2.jpg',
-      day: '15',
+      title: intl.formatMessage({ id: 'blog.posts.post2.title' }),
+      excerpt: intl.formatMessage({ id: 'blog.posts.post2.excerpt' }),
+      image: roboticsImages.hero2,
+      day: '16',
       month: 'Jan',
-      categories: 'Travel, Lifestyle',
-      comments: '03 Comments'
+      categories: intl.formatMessage({ id: 'blog.posts.post2.categories' }),
+      comments: intl.formatMessage({ id: 'blog.posts.post2.comments' })
     },
     {
       id: 3,
-      title: 'Google inks pact for new 35-storey office',
-      excerpt:
-        'That dominion stars lights dominion divide years for fourth have don\'t stars is that he earth it first without heaven in place seed it second morning saying.',
-      image: '/assets/img/blog/single_blog_3.jpg',
-      day: '15',
+      title: intl.formatMessage({ id: 'blog.posts.post3.title' }),
+      excerpt: intl.formatMessage({ id: 'blog.posts.post3.excerpt' }),
+      image: roboticsImages.hero3,
+      day: '18',
       month: 'Jan',
-      categories: 'Travel, Lifestyle',
-      comments: '03 Comments'
+      categories: intl.formatMessage({ id: 'blog.posts.post3.categories' }),
+      comments: intl.formatMessage({ id: 'blog.posts.post3.comments' })
     },
     {
       id: 4,
-      title: 'Google inks pact for new 35-storey office',
-      excerpt:
-        'That dominion stars lights dominion divide years for fourth have don\'t stars is that he earth it first without heaven in place seed it second morning saying.',
-      image: '/assets/img/blog/single_blog_4.jpg',
-      day: '15',
+      title: intl.formatMessage({ id: 'blog.posts.post4.title' }),
+      excerpt: intl.formatMessage({ id: 'blog.posts.post4.excerpt' }),
+      image: roboticsImages.gallery1,
+      day: '20',
       month: 'Jan',
-      categories: 'Travel, Lifestyle',
-      comments: '03 Comments'
+      categories: intl.formatMessage({ id: 'blog.posts.post4.categories' }),
+      comments: intl.formatMessage({ id: 'blog.posts.post4.comments' })
     },
     {
       id: 5,
-      title: 'Google inks pact for new 35-storey office',
-      excerpt:
-        'That dominion stars lights dominion divide years for fourth have don\'t stars is that he earth it first without heaven in place seed it second morning saying.',
-      image: '/assets/img/blog/single_blog_5.jpg',
-      day: '15',
+      title: intl.formatMessage({ id: 'blog.posts.post5.title' }),
+      excerpt: intl.formatMessage({ id: 'blog.posts.post5.excerpt' }),
+      image: roboticsImages.gallery2,
+      day: '22',
       month: 'Jan',
-      categories: 'Travel, Lifestyle',
-      comments: '03 Comments'
+      categories: intl.formatMessage({ id: 'blog.posts.post5.categories' }),
+      comments: intl.formatMessage({ id: 'blog.posts.post5.comments' })
     }
   ]
 
   const categories = [
-    { name: 'Resaurant food', count: 37 },
-    { name: 'Travel news', count: 10 },
-    { name: 'Modern technology', count: 3 },
-    { name: 'Product', count: 11 },
-    { name: 'Inspiration', count: 21 },
-    { name: 'Health Care', count: 9 }
+    { name: intl.formatMessage({ id: 'blog.sidebar.categories.cat1' }), count: 12 },
+    { name: intl.formatMessage({ id: 'blog.sidebar.categories.cat2' }), count: 8 },
+    { name: intl.formatMessage({ id: 'blog.sidebar.categories.cat3' }), count: 6 },
+    { name: intl.formatMessage({ id: 'blog.sidebar.categories.cat4' }), count: 10 },
+    { name: intl.formatMessage({ id: 'blog.sidebar.categories.cat5' }), count: 5 },
+    { name: intl.formatMessage({ id: 'blog.sidebar.categories.cat6' }), count: 4 }
   ]
 
   const recentPosts = [
-    { title: 'From life was you fish...', date: 'January 12, 2019', image: '/assets/img/post/post_1.jpg' },
-    { title: 'The Amazing Hubble', date: '02 Hours ago', image: '/assets/img/post/post_2.jpg' },
-    { title: 'Astronomy Or Astrology', date: '03 Hours ago', image: '/assets/img/post/post_3.jpg' },
-    { title: 'Asteroids telescope', date: '01 Hours ago', image: '/assets/img/post/post_4.jpg' }
+    {
+      title: intl.formatMessage({ id: 'blog.sidebar.recent.post1.title' }),
+      date: intl.formatMessage({ id: 'blog.sidebar.recent.post1.date' }),
+      image: roboticsImages.gallery1
+    },
+    {
+      title: intl.formatMessage({ id: 'blog.sidebar.recent.post2.title' }),
+      date: intl.formatMessage({ id: 'blog.sidebar.recent.post2.date' }),
+      image: roboticsImages.gallery2
+    },
+    {
+      title: intl.formatMessage({ id: 'blog.sidebar.recent.post3.title' }),
+      date: intl.formatMessage({ id: 'blog.sidebar.recent.post3.date' }),
+      image: roboticsImages.gallery3
+    },
+    {
+      title: intl.formatMessage({ id: 'blog.sidebar.recent.post4.title' }),
+      date: intl.formatMessage({ id: 'blog.sidebar.recent.post4.date' }),
+      image: roboticsImages.gallery1
+    }
   ]
 
-  const tags = ['project', 'love', 'technology', 'travel', 'restaurant', 'life style', 'design', 'illustration']
+  const tags = [
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag1' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag2' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag3' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag4' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag5' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag6' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag7' }),
+    intl.formatMessage({ id: 'blog.sidebar.tags.tag8' })
+  ]
   const instagramFeeds = [
-    '/assets/img/post/post_5.jpg',
-    '/assets/img/post/post_6.jpg',
-    '/assets/img/post/post_7.jpg',
-    '/assets/img/post/post_8.jpg',
-    '/assets/img/post/post_9.jpg',
-    '/assets/img/post/post_10.jpg'
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3,
+    roboticsImages.gallery1,
+    roboticsImages.gallery2,
+    roboticsImages.gallery3
   ]
 
   return (

@@ -1,10 +1,10 @@
 export const routes = [
   {
-    path: '/',
+    path: '',
     component: '@/pages/main',
     routes: [
       {
-        path: '',
+        path: '/',
         component: '@/pages/home/components/home'
       },
       {
