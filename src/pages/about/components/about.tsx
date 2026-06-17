@@ -7,22 +7,22 @@ import styles from './about.less'
 const About: React.FC = () => {
   const intl = useIntl()
   const roboticsImages = {
-    hero1: '/assets/img/robotics/figure/about-us-v2-hero-desktop-image.jpg',
-    hero2: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
-    hero3: '/assets/img/robotics/figure/hero-company-image-04.jpg',
-    gallery1: '/assets/img/robotics/figure/video-carousel-01.jpg',
-    gallery2: '/assets/img/robotics/figure/video-carousel-02.jpg',
-    gallery3: '/assets/img/robotics/figure/video-carousel-03.jpg',
-    service1: '/assets/img/robotics/figure/video-carousel-04.jpg',
-    service2: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
-    service3: '/assets/img/robotics/figure/videa_carousell_image.jpg',
-    instagram1: '/assets/img/robotics/figure/bmw_deployment_figure_in_action.jpg',
-    instagram2: '/assets/img/robotics/figure/bmw_update_website_thumb.jpg',
-    instagram3: '/assets/img/robotics/figure/736x590.jpg',
-    instagram4: '/assets/img/robotics/figure/hero-careers-02-image-02.jpg',
-    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
-    instagram6: '/assets/img/robotics/figure/image__69__copy.png',
-    authorAvatar: '/assets/img/robotics/figure/author_image.png'
+    hero1: '/assets/img/tech/tech-ai-lab.jpg',
+    hero2: '/assets/img/tech/tech-dev-desk.jpg',
+    hero3: '/assets/img/tech/tech-engineering.jpg',
+    gallery1: '/assets/img/tech/tech-ai-lab.jpg',
+    gallery2: '/assets/img/tech/tech-laptop-code.jpg',
+    gallery3: '/assets/img/tech/tech-cloud-infra.jpg',
+    service1: '/assets/img/tech/tech-motherboard.jpg',
+    service2: '/assets/img/tech/tech-data-dashboard.jpg',
+    service3: '/assets/img/tech/tech-automation.jpg',
+    instagram1: '/assets/img/tech/tech-robot-hand.jpg',
+    instagram2: '/assets/img/tech/tech-dev-desk.jpg',
+    instagram3: '/assets/img/tech/tech-cyber-ai.jpg',
+    instagram4: '/assets/img/tech/tech-laptop-code.jpg',
+    instagram5: '/assets/img/tech/tech-cloud-infra.jpg',
+    instagram6: '/assets/img/tech/tech-automation.jpg',
+    authorAvatar: '/assets/img/tech/tech-robot-hand.jpg'
   }
 
   // 服务数据

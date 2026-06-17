@@ -9,28 +9,28 @@ const Home: React.FC = () => {
   const intl = useIntl()
 
   const roboticsImages = {
-    hero1: '/assets/img/robotics/figure/hero-company-image-04.jpg',
-    hero2: '/assets/img/robotics/figure/hero-figure-03-image-02.jpg',
-    hero3: '/assets/img/robotics/figure/hero-careers-02-image-02.jpg',
-    aboutSig: '/assets/img/robotics/figure/video-carousel-04.jpg',
-    aboutMain: '/assets/img/robotics/figure/bmw_deployment_figure_in_action.jpg',
-    aboutBadge: '/assets/img/robotics/figure/video-carousel-03.jpg',
-    gallery1: '/assets/img/robotics/figure/video-carousel-01.jpg',
-    gallery2: '/assets/img/robotics/figure/video-carousel-02.jpg',
-    gallery3: '/assets/img/robotics/figure/video-carousel-03.jpg',
-    gallery4: '/assets/img/robotics/figure/video-carousel-04.jpg',
-    gallery5: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
-    gallery6: '/assets/img/robotics/figure/videa_carousell_image.jpg',
-    service1: '/assets/img/robotics/figure/736x590.jpg',
-    service2: '/assets/img/robotics/figure/bmw_update_website_thumb.jpg',
-    service3: '/assets/img/robotics/figure/generic-page-image.jpeg',
-    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
-    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
-    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
-    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
-    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
-    instagram6: '/assets/img/robotics/figure/image__69.png',
-    authorAvatar: '/assets/img/robotics/figure/author_image.png'
+    hero1: '/assets/img/tech/tech-ai-lab.jpg',
+    hero2: '/assets/img/tech/tech-robotics.jpg',
+    hero3: '/assets/img/tech/tech-cloud-infra.jpg',
+    aboutSig: '/assets/img/tech/tech-motherboard.jpg',
+    aboutMain: '/assets/img/tech/tech-robot-hand.jpg',
+    aboutBadge: '/assets/img/tech/tech-data-dashboard.jpg',
+    gallery1: '/assets/img/tech/tech-ai-lab.jpg',
+    gallery2: '/assets/img/tech/tech-dev-desk.jpg',
+    gallery3: '/assets/img/tech/tech-cyber-ai.jpg',
+    gallery4: '/assets/img/tech/tech-motherboard.jpg',
+    gallery5: '/assets/img/tech/tech-engineering.jpg',
+    gallery6: '/assets/img/tech/tech-automation.jpg',
+    service1: '/assets/img/tech/tech-robotics.jpg',
+    service2: '/assets/img/tech/tech-laptop-code.jpg',
+    service3: '/assets/img/tech/tech-data-dashboard.jpg',
+    instagram1: '/assets/img/tech/tech-ai-lab.jpg',
+    instagram2: '/assets/img/tech/tech-dev-desk.jpg',
+    instagram3: '/assets/img/tech/tech-motherboard.jpg',
+    instagram4: '/assets/img/tech/tech-laptop-code.jpg',
+    instagram5: '/assets/img/tech/tech-cloud-infra.jpg',
+    instagram6: '/assets/img/tech/tech-automation.jpg',
+    authorAvatar: '/assets/img/tech/tech-robot-hand.jpg'
   }
 
   // 轮播图数据
@@ -59,6 +59,29 @@ const Home: React.FC = () => {
     intl.formatMessage({ id: 'home.hero.stat1' }),
     intl.formatMessage({ id: 'home.hero.stat2' }),
     intl.formatMessage({ id: 'home.hero.stat3' })
+  ]
+
+  const credibilityItems = [
+    {
+      id: 1,
+      title: intl.formatMessage({ id: 'home.credibility.item1.title' }),
+      description: intl.formatMessage({ id: 'home.credibility.item1.desc' })
+    },
+    {
+      id: 2,
+      title: intl.formatMessage({ id: 'home.credibility.item2.title' }),
+      description: intl.formatMessage({ id: 'home.credibility.item2.desc' })
+    },
+    {
+      id: 3,
+      title: intl.formatMessage({ id: 'home.credibility.item3.title' }),
+      description: intl.formatMessage({ id: 'home.credibility.item3.desc' })
+    },
+    {
+      id: 4,
+      title: intl.formatMessage({ id: 'home.credibility.item4.title' }),
+      description: intl.formatMessage({ id: 'home.credibility.item4.desc' })
+    }
   ]
 
   // 作品画廊数据
@@ -258,6 +281,27 @@ const Home: React.FC = () => {
               </p>
               <Link to="/showcase" className={styles.btnPrimary}>{intl.formatMessage({ id: 'home.myWork' })}</Link>
             </Col>
+          </Row>
+        </div>
+      </section>
+
+      {/* Credibility Section */}
+      <section className={styles.credibilitySection}>
+        <div className={styles.container}>
+          <div className={styles.sectionIntro}>
+            <span>{intl.formatMessage({ id: 'home.credibility.eyebrow' })}</span>
+            <h2>{intl.formatMessage({ id: 'home.credibility.title' })}</h2>
+          </div>
+          <Row gutter={[24, 24]}>
+            {credibilityItems.map((item) => (
+              <Col key={item.id} xs={24} md={12} lg={6}>
+                <div className={styles.credibilityCard}>
+                  <strong>0{item.id}</strong>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </Col>
+            ))}
           </Row>
         </div>
       </section>

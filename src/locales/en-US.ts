@@ -69,6 +69,26 @@ export default {
       quote:
         '"From a deep-space vision, we bring intelligent technology into the real world."'
     },
+    credibility: {
+      eyebrow: 'Trust and Feasibility',
+      title: 'A Clear Path from Technical Judgment to Practical Delivery',
+      item1: {
+        title: 'Focused Technical Direction',
+        desc: 'We build around embodied intelligence, robotic perception, motion control, software systems, and intelligent equipment.'
+      },
+      item2: {
+        title: 'Verifiable Scenarios',
+        desc: 'We prioritize practical scenarios such as education, intelligent interaction, automation assistance, data collection, and prototypes.'
+      },
+      item3: {
+        title: 'Clear Delivery Process',
+        desc: 'From requirements and solution design to prototyping, validation, and iteration, each project has a visible path.'
+      },
+      item4: {
+        title: 'Focused Company Strengths',
+        desc: 'We combine technical understanding, engineering execution, visual experience, and fast response into demonstrable outcomes.'
+      }
+    },
     learn: {
       title: 'What You Can Learn Here',
       item1: {

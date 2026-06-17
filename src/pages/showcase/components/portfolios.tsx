@@ -9,21 +9,21 @@ const Portfolios: React.FC = () => {
   const intl = useIntl()
 
   const roboticsImages = {
-    tile1: '/assets/img/robotics/figure/video-carousel-01.jpg',
-    tile2: '/assets/img/robotics/figure/video-carousel-02.jpg',
-    tile3: '/assets/img/robotics/figure/video-carousel-03.jpg',
-    tile4: '/assets/img/robotics/figure/video-carousel-04.jpg',
-    tile5: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
-    tile6: '/assets/img/robotics/figure/videa_carousell_image.jpg',
-    tile7: '/assets/img/robotics/figure/736x590.jpg',
-    tile8: '/assets/img/robotics/figure/bmw_deployment_figure_in_action.jpg',
-    tile9: '/assets/img/robotics/figure/hero-company-image-04.jpg',
-    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
-    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
-    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
-    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
-    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
-    instagram6: '/assets/img/robotics/figure/image__69.png'
+    tile1: '/assets/img/tech/tech-ai-lab.jpg',
+    tile2: '/assets/img/tech/tech-dev-desk.jpg',
+    tile3: '/assets/img/tech/tech-data-dashboard.jpg',
+    tile4: '/assets/img/tech/tech-motherboard.jpg',
+    tile5: '/assets/img/tech/tech-cloud-infra.jpg',
+    tile6: '/assets/img/tech/tech-automation.jpg',
+    tile7: '/assets/img/tech/tech-robotics.jpg',
+    tile8: '/assets/img/tech/tech-robot-hand.jpg',
+    tile9: '/assets/img/tech/tech-cyber-ai.jpg',
+    instagram1: '/assets/img/tech/tech-ai-lab.jpg',
+    instagram2: '/assets/img/tech/tech-engineering.jpg',
+    instagram3: '/assets/img/tech/tech-motherboard.jpg',
+    instagram4: '/assets/img/tech/tech-laptop-code.jpg',
+    instagram5: '/assets/img/tech/tech-cloud-infra.jpg',
+    instagram6: '/assets/img/tech/tech-automation.jpg'
   }
 
   // 作品分类

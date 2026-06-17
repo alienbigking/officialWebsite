@@ -7,19 +7,19 @@ import styles from './services.less'
 const Services: React.FC = () => {
   const intl = useIntl()
   const roboticsImages = {
-    card1: '/assets/img/robotics/figure/video-carousel-01.jpg',
-    card2: '/assets/img/robotics/figure/video-carousel-02.jpg',
-    card3: '/assets/img/robotics/figure/video-carousel-03.jpg',
-    card4: '/assets/img/robotics/figure/video-carousel-04.jpg',
-    card5: '/assets/img/robotics/figure/VIDEO_CAROUSEL.jpg',
-    card6: '/assets/img/robotics/figure/videa_carousell_image.jpg',
-    instagram1: '/assets/img/robotics/figure/about-us-v2-hero-mobile-image.jpg',
-    instagram2: '/assets/img/robotics/figure/careers-v2-hero-mobile-image.jpg',
-    instagram3: '/assets/img/robotics/figure/hero-company-image-04-mobile.jpg',
-    instagram4: '/assets/img/robotics/figure/hero-figure-03-image-02-mobile.jpg',
-    instagram5: '/assets/img/robotics/figure/hero-careers-02-image-02-mobile.jpg',
-    instagram6: '/assets/img/robotics/figure/image__69.png',
-    authorAvatar: '/assets/img/robotics/figure/author_image.png'
+    card1: '/assets/img/tech/tech-ai-lab.jpg',
+    card2: '/assets/img/tech/tech-laptop-code.jpg',
+    card3: '/assets/img/tech/tech-data-dashboard.jpg',
+    card4: '/assets/img/tech/tech-motherboard.jpg',
+    card5: '/assets/img/tech/tech-cloud-infra.jpg',
+    card6: '/assets/img/tech/tech-automation.jpg',
+    instagram1: '/assets/img/tech/tech-ai-lab.jpg',
+    instagram2: '/assets/img/tech/tech-dev-desk.jpg',
+    instagram3: '/assets/img/tech/tech-motherboard.jpg',
+    instagram4: '/assets/img/tech/tech-laptop-code.jpg',
+    instagram5: '/assets/img/tech/tech-cyber-ai.jpg',
+    instagram6: '/assets/img/tech/tech-automation.jpg',
+    authorAvatar: '/assets/img/tech/tech-robot-hand.jpg'
   }
 
   // 服务数据
