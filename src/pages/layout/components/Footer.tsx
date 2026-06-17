@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useIntl } from '@umijs/max'
 import { Row, Col, Input, Button } from 'antd'
-import { FacebookFilled, InstagramFilled, LinkedinFilled, YoutubeFilled } from '@ant-design/icons'
+import { MailOutlined, PhoneOutlined, EnvironmentOutlined, RocketOutlined } from '@ant-design/icons'
 import styles from './Footer.less'
 
 const Footer: React.FC = () => {
@@ -24,13 +24,6 @@ const Footer: React.FC = () => {
     ]
   }
 
-  const socialLinks = [
-    { icon: <FacebookFilled />, url: 'https://facebook.com' },
-    { icon: <InstagramFilled />, url: 'https://instagram.com' },
-    { icon: <LinkedinFilled />, url: 'https://linkedin.com' },
-    { icon: <YoutubeFilled />, url: 'https://youtube.com' }
-  ]
-
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()
     // 处理订阅逻辑
@@ -45,23 +38,15 @@ const Footer: React.FC = () => {
             <Col xs={24} sm={12} lg={6}>
               <div className={styles.footerWidget}>
                 <div className={styles.footerLogo}>
-                  <img src="/assets/img/logo/logo2_footer.png" alt="Footer Logo" />
+                  <RocketOutlined />
+                  <span>深空起源</span>
                 </div>
                 <p className={styles.footerDesc}>
                   {intl.formatMessage({ id: 'footer.description' })}
                 </p>
                 <div className={styles.footerSocial}>
-                  {socialLinks.map((link, index) => (
-                    <a
-                      key={index}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.socialLink}
-                    >
-                      {link.icon}
-                    </a>
-                  ))}
+                  <a href="mailto:1260213657@qq.com" className={styles.socialLink}><MailOutlined /></a>
+                  <a href="tel:13066969681" className={styles.socialLink}><PhoneOutlined /></a>
                 </div>
               </div>
             </Col>
@@ -87,6 +72,9 @@ const Footer: React.FC = () => {
                 <ul className={styles.footerContact}>
                   {footerLinks.contact.map((item, index) => (
                     <li key={index} className={styles[item.type]}>
+                      {item.type === 'address' && <EnvironmentOutlined />}
+                      {item.type === 'email' && <MailOutlined />}
+                      {item.type === 'phone' && <PhoneOutlined />}
                       {item.label}
                     </li>
                   ))}

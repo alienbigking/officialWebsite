@@ -283,3 +283,95 @@
     color: #2c2c2c;
   }
 }
+
+// Deep-space page refresh
+.about {
+  background: #060b18;
+  color: #dce8ff;
+}
+
+.heroSection {
+  height: 460px;
+  background-image:
+    linear-gradient(120deg, rgba(5, 10, 24, 0.95), rgba(5, 10, 24, 0.42)),
+    url('/assets/img/robotics/figure/about-us-v2-hero-desktop-image.jpg');
+  isolation: isolate;
+
+  &::before {
+    background:
+      radial-gradient(circle at 50% 70%, rgba(110, 231, 255, 0.22), transparent 34%),
+      linear-gradient(rgba(110, 231, 255, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(110, 231, 255, 0.07) 1px, transparent 1px);
+    background-size: auto, 52px 52px, 52px 52px;
+  }
+}
+
+.heroSubtitle {
+  color: #93f4ff;
+}
+
+.heroTitle,
+.sectionTitle,
+.testimonialItem h2,
+.serviceContent h5 {
+  color: #f8fbff;
+}
+
+.aboutSection,
+.servicesSection {
+  background:
+    radial-gradient(circle at 12% 6%, rgba(37, 99, 235, 0.16), transparent 32%),
+    #071022;
+}
+
+.testimonialSection {
+  background:
+    linear-gradient(135deg, rgba(8, 16, 34, 0.98), rgba(17, 24, 54, 0.98)),
+    radial-gradient(circle at 72% 20%, rgba(124, 58, 237, 0.28), transparent 32%);
+}
+
+.aboutDescription,
+.quote,
+.testimonialText,
+.testimonialAuthor p,
+.serviceContent p,
+.experience p {
+  color: rgba(220, 232, 255, 0.72);
+}
+
+.aboutImage img,
+.experience,
+.signature img,
+.serviceCard {
+  border: 1px solid rgba(110, 231, 255, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.signature img,
+.experience img {
+  border-radius: 18px;
+}
+
+.serviceCard {
+  backdrop-filter: blur(14px);
+
+  &:hover {
+    box-shadow: 0 28px 90px rgba(37, 99, 235, 0.22);
+  }
+}
+
+.serviceContent {
+  background: rgba(8, 16, 34, 0.76);
+}
+
+.btnPrimary {
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  box-shadow: 0 16px 42px rgba(59, 130, 246, 0.26);
+
+  &:hover {
+    background: linear-gradient(135deg, #60a5fa, #8b5cf6);
+  }
+}

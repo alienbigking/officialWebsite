@@ -23,28 +23,34 @@ export default {
     contact: 'Contact',
     subscribeNewsletter: 'Subscribe Newsletter',
     enterEmail: 'Enter your email',
-    copyright: 'DeepSea SpaceTech. All rights reserved | Made with',
+    copyright: 'Shenzhen Deep Space Origin Technology Co., Ltd. All rights reserved | Made with',
     by: 'Template by',
     description:
-      'DeepSea SpaceTech focuses on humanoid robotics popular science. We share accessible explanations, hands-on demos, and learning paths from perception to motion control.',
-    address: 'China',
+      'Shenzhen Deep Space Origin Technology Co., Ltd. explores embodied intelligence, robotics, and intelligent equipment with future-facing engineering and elegant product experiences.',
+    address: 'Shenzhen Deep Space Origin Technology Co., Ltd.',
     email: '1260213657@qq.com',
-    phone: '+86 (000) 0000-0000'
+    phone: '13066969681'
   },
   home: {
     myWork: 'Showcase',
     hero: {
+      subtitle: 'Focused on embodied intelligence, robotic perception, motion control, and intelligent equipment for future-facing technology products and solutions.',
+      primaryCta: 'Explore Capabilities',
+      secondaryCta: 'Contact Us',
+      stat1: 'Embodied AI',
+      stat2: 'Smart Equipment',
+      stat3: 'Engineering',
       slide1: {
-        category: 'Humanoid Robotics Popular Science',
-        title: 'Understand Embodied Intelligence from Zero'
+        category: 'Shenzhen Deep Space Origin Technology Co., Ltd.',
+        title: 'Exploring Embodied Intelligence with a Deep-Space Vision'
       },
       slide2: {
         category: 'Perception + Control + Interaction',
-        title: 'See How Robots Sense, Think, and Move'
+        title: 'Helping Intelligent Systems Understand the Real World'
       },
       slide3: {
-        category: 'Open Demos and Learning Paths',
-        title: 'Build Real Robotics Projects with Us'
+        category: 'R&D and Scenario Implementation',
+        title: 'Building Elegant, Reliable, and Evolving Technology'
       }
     },
     gallery: {
@@ -56,12 +62,12 @@ export default {
       item6: { category: 'Safety', title: 'Real-World Experiment Protocol' }
     },
     about: {
-      title: 'A Popular-Science Hub for Humanoid Robotics',
+      title: 'Deep Space Origin: Future-Oriented Intelligent Technology',
       desc:
-        'DeepSea SpaceTech turns complex robotics ideas into understandable learning content. We focus on practical knowledge from perception and motion control to embodied intelligence, helping learners connect theory with real-world demos.',
-      badge: '120+ popular-science sessions',
+        'Shenzhen Deep Space Origin Technology Co., Ltd. focuses on embodied intelligence, robotic perception, motion control, and intelligent equipment applications—turning frontier technology into reliable real-world value.',
+      badge: 'Focused on intelligent innovation',
       quote:
-        '"Our mission is to make humanoid robotics understandable, approachable, and inspiring for everyone."'
+        '"From a deep-space vision, we bring intelligent technology into the real world."'
     },
     learn: {
       title: 'What You Can Learn Here',
@@ -219,15 +225,15 @@ export default {
   },
   about: {
     explore: 'Explore',
-    title: 'About DeepSea SpaceTech',
+    title: 'About Deep Space Origin',
     myWork: 'Showcase',
     section: {
       title: 'Turning Humanoid Robotics into Understandable Knowledge',
       desc:
-        'We focus on robotics popular science: clear explanations, hands-on demos, and structured learning paths—from perception and control to embodied intelligence.',
-      badge: '120+ popular-science sessions',
+        'We focus on embodied intelligence, robotic perception, motion control, and intelligent equipment applications, connecting R&D, engineering validation, and practical industry scenarios.',
+      badge: 'Future-oriented intelligent technology',
       quote:
-        '"Learn the fundamentals, build the demos, and understand how real humanoid robots work."'
+        '"Rooted in engineering, guided by future imagination."'
     },
     services: {
       title: 'What We Provide',
@@ -332,7 +338,7 @@ export default {
   },
   contact: {
     explore: 'Explore',
-    title: 'Contact Me',
+    title: 'Contact Deep Space Origin',
     getInTouch: 'Get in Touch',
     enterMessage: 'Enter Message',
     enterName: 'Enter your name',
@@ -341,8 +347,8 @@ export default {
     send: 'Send',
     messageSent: 'Message sent successfully!',
     info: {
-      address: { title: 'China', text: 'DeepSea SpaceTech' },
-      phone: { title: '+86 13267167216', text: 'Mon to Fri 9am to 6pm' },
+      address: { title: 'Shenzhen Deep Space Origin Technology Co., Ltd.', text: 'Open to technology partnerships and project inquiries' },
+      phone: { title: '13066969681', text: 'Mon to Fri 9am to 6pm' },
       email: { title: '1260213657@qq.com', text: 'Send us your query anytime!' }
     },
     validation: {

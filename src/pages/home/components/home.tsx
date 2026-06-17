@@ -55,6 +55,12 @@ const Home: React.FC = () => {
     }
   ]
 
+  const heroStats = [
+    intl.formatMessage({ id: 'home.hero.stat1' }),
+    intl.formatMessage({ id: 'home.hero.stat2' }),
+    intl.formatMessage({ id: 'home.hero.stat3' })
+  ]
+
   // 作品画廊数据
   const galleryItems = [
     {
@@ -203,6 +209,18 @@ const Home: React.FC = () => {
                 <div className={styles.heroContent}>
                   <span className={styles.heroCategory}>{slide.category}</span>
                   <h1 className={styles.heroTitle}>{slide.title}</h1>
+                  <p className={styles.heroSubtitle}>{intl.formatMessage({ id: 'home.hero.subtitle' })}</p>
+                  <div className={styles.heroActions}>
+                    <Link to="/learn" className={styles.btnPrimary}>{intl.formatMessage({ id: 'home.hero.primaryCta' })}</Link>
+                    <Link to="/contact" className={styles.btnGhost}>{intl.formatMessage({ id: 'home.hero.secondaryCta' })}</Link>
+                  </div>
+                  <div className={styles.heroStats}>
+                    {heroStats.map((item, index) => (
+                      <span key={item} className={index === currentSlide ? styles.heroStatActive : ''}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

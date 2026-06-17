@@ -23,28 +23,34 @@ export default {
     contact: '联系方式',
     subscribeNewsletter: '订阅资讯',
     enterEmail: '输入您的邮箱',
-    copyright: '深海太空科技 保留所有权利 |',
+    copyright: '深圳市深空起源科技有限公司 保留所有权利 |',
     by: '模板来自',
     description:
-      '深海太空科技专注于人形机器人科普，提供通俗易懂的讲解、动手实践 Demo 与学习路径，覆盖感知、运动控制与具身智能等方向。',
-    address: '中国',
+      '深圳市深空起源科技有限公司聚焦具身智能、人形机器人与智能装备方向，以前沿技术、工程实践和优雅体验连接未来场景。',
+    address: '深圳市深空起源科技有限公司',
     email: '1260213657@qq.com',
-    phone: '+86 13267167216'
+    phone: '13066969681'
   },
   home: {
     myWork: '查看展示',
     hero: {
+      subtitle: '聚焦具身智能、机器人感知、运动控制与智能装备应用，打造面向未来场景的科技产品与解决方案。',
+      primaryCta: '探索能力',
+      secondaryCta: '联系合作',
+      stat1: '具身智能',
+      stat2: '智能装备',
+      stat3: '工程落地',
       slide1: {
-        category: '人形机器人科普',
-        title: '从零理解具身智能'
+        category: '深圳市深空起源科技有限公司',
+        title: '以深空视野探索具身智能未来'
       },
       slide2: {
         category: '感知 + 控制 + 交互',
-        title: '看懂机器人如何“看、想、动”'
+        title: '让智能装备真正理解真实世界'
       },
       slide3: {
-        category: '开源 Demo 与学习路径',
-        title: '一起做真正的机器人项目'
+        category: '技术研发与场景落地',
+        title: '构建优雅、可靠、可进化的科技产品'
       }
     },
     gallery: {
@@ -56,11 +62,11 @@ export default {
       item6: { category: '安全', title: '真实环境实验规范' }
     },
     about: {
-      title: '人形机器人科普与实践平台',
+      title: '深空起源：面向未来的智能科技公司',
       desc:
-        '深海太空科技把复杂的机器人知识讲清楚。我们聚焦感知、运动控制与具身智能等方向，用通俗讲解 + 动手 Demo，帮助你把理论和真实场景连接起来。',
-      badge: '120+ 场科普内容',
-      quote: '“让人形机器人更易懂、更可学、更可做。”'
+        '深圳市深空起源科技有限公司关注具身智能、机器人感知、运动控制与智能装备应用，用严谨工程能力和清晰产品审美，把前沿技术转化为可信赖的真实场景价值。',
+      badge: '专注智能科技创新',
+      quote: '“从深空视野出发，让智能技术抵达真实世界。”'
     },
     learn: {
       title: '你可以在这里学到什么',
@@ -213,14 +219,14 @@ export default {
   },
   about: {
     explore: '探索',
-    title: '关于深海太空科技',
+    title: '关于深空起源',
     myWork: '查看展示',
     section: {
       title: '把人形机器人讲清楚、做出来',
       desc:
-        '我们专注于机器人科普：通俗讲解、动手 Demo 与结构化学习路径，覆盖感知、控制与具身智能等关键方向。',
-      badge: '120+ 场科普内容',
-      quote: '“打好基础，做出 Demo，看懂真实的人形机器人。”'
+        '我们专注于具身智能、机器人感知、运动控制与智能装备应用，持续探索技术研发、工程验证与产业场景之间的高质量连接。',
+      badge: '面向未来的智能科技',
+      quote: '“以工程能力为根，以未来想象为翼。”'
     },
     services: {
       title: '我们提供什么',
@@ -323,7 +329,7 @@ export default {
   },
   contact: {
     explore: '探索',
-    title: '联系我',
+    title: '联系深空起源',
     getInTouch: '保持联系',
     enterMessage: '输入消息',
     enterName: '输入您的姓名',
@@ -332,8 +338,8 @@ export default {
     send: '发送',
     messageSent: '消息发送成功！',
     info: {
-      address: { title: '中国', text: '深海太空科技' },
-      phone: { title: '+86 13267167216', text: '周一至周五 9:00-18:00' },
+      address: { title: '深圳市深空起源科技有限公司', text: '欢迎交流技术合作与项目需求' },
+      phone: { title: '13066969681', text: '周一至周五 9:00-18:00' },
       email: { title: '1260213657@qq.com', text: '随时欢迎你的咨询与合作！' }
     },
     validation: {

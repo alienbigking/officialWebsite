@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useIntl, setLocale, getLocale } from '@umijs/max'
 import { Drawer } from 'antd'
-import { MenuOutlined, FacebookFilled, InstagramFilled, TwitterOutlined, YoutubeFilled, GlobalOutlined } from '@ant-design/icons'
+import { MenuOutlined, GlobalOutlined, PhoneOutlined } from '@ant-design/icons'
 import styles from './Header.less'
 
 const Header: React.FC = () => {
@@ -30,13 +30,6 @@ const Header: React.FC = () => {
     { path: '/contact', label: intl.formatMessage({ id: 'common.contact' }) }
   ]
 
-  const socialLinks = [
-    { icon: <FacebookFilled />, url: 'https://facebook.com' },
-    { icon: <InstagramFilled />, url: 'https://instagram.com' },
-    { icon: <TwitterOutlined />, url: 'https://twitter.com' },
-    { icon: <YoutubeFilled />, url: 'https://youtube.com' }
-  ]
-
   // 判断是否在首页
   const isHomePage = location.pathname === '/home' || location.pathname === '/'
 
@@ -50,8 +43,9 @@ const Header: React.FC = () => {
     <header className={`${styles.header} ${scrolled || !isHomePage ? styles.headerScrolled : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link to="/home">
-            <img src="/assets/img/logo/logo.png" alt="Photographer Logo" />
+          <Link to="/home" className={styles.logoMark}>
+            <span className={styles.logoOrb} />
+            <span className={styles.logoText}>深空起源</span>
           </Link>
         </div>
 
@@ -68,17 +62,10 @@ const Header: React.FC = () => {
         </nav>
 
         <div className={styles.social}>
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              {link.icon}
-            </a>
-          ))}
+          <a href="tel:13066969681" className={styles.contactPill}>
+            <PhoneOutlined />
+            <span>13066969681</span>
+          </a>
           <button
             type="button"
             onClick={toggleLanguage}
@@ -121,17 +108,8 @@ const Header: React.FC = () => {
           ))}
         </div>
         <div className={styles.mobileSocial}>
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.mobileSocialLink}
-            >
-              {link.icon}
-            </a>
-          ))}
+          <a href="tel:13066969681" className={styles.mobileSocialLink}>13066969681</a>
+          <a href="mailto:1260213657@qq.com" className={styles.mobileSocialLink}>1260213657@qq.com</a>
         </div>
       </Drawer>
     </header>
